@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Proyecto_Final</string>
+
+    <string name="yogurt">Yogurts</string>
+    <string name="leches">Leches</string>
+
+    <string name="inicio">Inicio</string>
+    <string name="categoria">Categoria</string>
+    <string name="carrito">Carrito</string>
+    <string name="buscar">Buscar</string>
+    <string name="menu">Menu</string>
+
+    <string name="lacteo">Lacteos</string>
+    <string name="bebida">Bebidas</string>
+    <string name="snack">Snacks</string>
+    <string name="limpieza">Limpieza</string>
+    <string name="cuidado">Cuidado Personal</string>
+    <string name="mascota">Mascotas</string>
+
+    <string name="separador">────────────────────────────────────────</string>
+    <string name="despacho">✔ Despacho a Domicilio</string>
+    <string name="nombre">Raul Torres</string>
+    <string name="correo">RaulT15@gmail.com</string>
+    <string name="suscripcion">Miembro desde: 2 Sep 2022</string>
+
+    <string name="pedido">Mi Pedido</string>
+    <string name="oferta">Ofertas</string>
+    <string name="pago">Metodo de pago</string>
+    <string name="cuenta">Mi Cuenta</string>
+
+    <string name="sesion">Cerrar Sesión</string>
+</resources>

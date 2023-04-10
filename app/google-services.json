@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "846144372278",
+    "firebase_url": "https://minimarket-michel-default-rtdb.firebaseio.com",
+    "project_id": "minimarket-michel",
+    "storage_bucket": "minimarket-michel.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:846144372278:android:0923a3370ae11a8203e297",
+        "android_client_info": {
+          "package_name": "com.example.proyecto_final"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "846144372278-rqhd9jtbhh6gdn5ht7lja3h35e8sokjj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRTbNsYkU0O7bFgyldfdhaRwkXbd6zqqs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "846144372278-rqhd9jtbhh6gdn5ht7lja3h35e8sokjj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
