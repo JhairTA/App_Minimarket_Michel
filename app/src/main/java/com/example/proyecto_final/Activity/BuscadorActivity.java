@@ -16,7 +16,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import java.util.ArrayList;
 
@@ -88,5 +90,20 @@ public class BuscadorActivity extends AppCompatActivity {
         }
         AdapterProducto adapter = new AdapterProducto(getApplicationContext(),milista);
         rv.setAdapter(adapter);
+    }
+
+    public void categoria(View view){
+        Intent intent =new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void menu(View view){
+        Intent intent =new Intent(this, MenuActivity.class);
+        startActivity(intent);
+    }
+
+    public void inicio(View view){
+        Intent intent =new Intent(this, InicioActivity.class);
+        startActivity(intent);
     }
 }
