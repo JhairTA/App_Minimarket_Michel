@@ -3,11 +3,11 @@ package com.example.proyecto_final.Domain;
 public class Producto {
     int id;
     String nombre;
-    double precio;
+    String precio;
     int recomendado;
     String imagen;
 
-    public Producto(int id, String nombre, double precio, int recomendado, String imagen) {
+    public Producto(int id, String nombre, String precio, int recomendado, String imagen) {
         this.id = id;
         this.nombre = nombre;
         this.precio = precio;
@@ -34,11 +34,11 @@ public class Producto {
         this.nombre = nombre;
     }
 
-    public double getPrecio() {
+    public String getPrecio() {
         return precio;
     }
 
-    public void setPrecio(double precio) {
+    public void setPrecio(String precio) {
         this.precio = precio;
     }
 
