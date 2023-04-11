@@ -99,16 +99,22 @@ public class MainActivity extends AppCompatActivity {
         recyclerViewProductoLechesList.setLayoutManager(linearLayoutManager);
 
         ArrayList<ProductoLeches> productoLechesList=new ArrayList<>();
-        productoLechesList.add(new ProductoLeches("Leche Gloria Evapo. Lata 400g", "leche_gloria", "fdf", 3.99));
-        productoLechesList.add(new ProductoLeches("Leche Pura Vida Lata 400g", "leche_puravida", "fdf", 3.70));
-        productoLechesList.add(new ProductoLeches("Leche Ideal Amanecer Lata 400g", "leche_ideal", "fdf", 3.80));
-        productoLechesList.add(new ProductoLeches("Leche Bonlé Cremosa Lata 395g", "leche_bonle", "fdf", 4.50));
-        productoLechesList.add(new ProductoLeches("Leche UHT Bells Caja 1L", "leche_bells", "fdf", 5.20));
-        productoLechesList.add(new ProductoLeches("Leche Gloria Light Lata 400g", "leche_gloria_light", "fdf", 4.99));
-        productoLechesList.add(new ProductoLeches("Leche Laive Vitamin Caja 500g", "leche_laive", "fdf", 5.50));
-        productoLechesList.add(new ProductoLeches("Leche Bonlé Light Caja 500g", "leche_bonle_light", "fdf", 4.20));
-        productoLechesList.add(new ProductoLeches("Leche Gloria Evapo. Lata 400g", "leche_gloria_morado", "fdf", 3.60));
-        productoLechesList.add(new ProductoLeches("Leche Laive Sin Lactosa Bolsa 900ml", "leche_laive_bolsa", "fdf", 4.70));
+        productoLechesList.add(new ProductoLeches("Leche Gloria Evapo. Lata 400g", "leche_gloria", "Esta combinación le da la cremosidad, consistencia y sabor que la hacen la leche favorita de los peruanos. Aporta nutrientes propios de la leche como proteínas de alta calidad, calcio y fósforo, que promueven el crecimiento, conservan la masa muscular y mantienen huesos y dientes. Además, está enriquecida con vitaminas A y D.", 3.99));
+        productoLechesList.add(new ProductoLeches("Leche Pura Vida Lata 400g", "leche_puravida", "Es una mezcla láctea compuesta con aceite vegetal y maltodextrina, enriquecida con vitaminas (A y D) y minerales (hierro y zinc).\n" +
+                                                        "Producto fortificado con hierro y zinc, nutrientes importantes que ayudan al control de la anemia unido a una alimentación balanceada y saludable.\n" +
+                                                        "Fuente de vitaminas A, D y zinc", 3.70));
+        productoLechesList.add(new ProductoLeches("Leche Ideal Amanecer Lata 400g", "leche_ideal", "Contiene Hierro, Zinc, Calcio y Vitaminas A, C y D; nutrientes claves que contribuyen a la buena nutrición de tu familia. Alimentos fortificados con Hierro y Vitamina C como Ideal Amanecer contribuyen a reducir el riesgo de deficiencia de Hierro en los niños, el cual puede causar anemia.", 3.80));
+        productoLechesList.add(new ProductoLeches("Leche Bonlé Cremosa Lata 395g", "leche_bonle", "Es una mezcla láctea que gracias a su aporte de vitaminas: A y D, calcio y fósforo, contribuye al funcionamiento del sistema de defensas y al mantenimiento de los huesos. Está dirigida a toda la familia. Por su presentación en caja Tetrabrik con abre fácil, se adapta a cualquier momento y lugar.", 4.50));
+        productoLechesList.add(new ProductoLeches("Leche UHT Bells Caja 1L", "leche_bells", "Producto líquido homogéneo de color blanco crema con olor y sabor a leche, a partir de leche cruda y/o concentrada, con posibilidad de agregar leche en polvo descremada, grasa anhidra láctea y/o agua según sea necesario para normalizarla hasta cumplir con los requisitos físico químicos del ingrediente leche entera. Sometido a ultra alta temperatura.", 5.20));
+        productoLechesList.add(new ProductoLeches("Leche Gloria Light Lata 400g", "leche_gloria_light", "Desarrollada especialmente con el delicioso sabor de siempre, pero con menos calorías y 50% menos grasa que una leche entera. Aporta nutrientes propios de la leche como proteínas de alta calidad, calcio y fósforo, que promueven el crecimiento, conservan la masa muscular y mantienen huesos y dientes. Además, está enriquecida con vitaminas A y D.", 4.99));
+        productoLechesList.add(new ProductoLeches("Leche Laive Vitamin Caja 500g", "leche_laive", "Leche concentrada con 6.4% de grasa. Producto liquido homogéneo, de color blanco crema con olor y sabor característico de leche, con adición de vitaminas (A, C y D), además de aportar los nutrientes naturales de la leche. A partir de leche concentrada y leche recombinada o reconstituida", 5.50));
+        productoLechesList.add(new ProductoLeches("Leche Bonlé Light Caja 500g", "leche_bonle_light", "Es una mezcla láctea especialmente para personas que requieren una dieta con menos grasa. Gracias a su aporte de vitaminas: A y D, calcio y fósforo, contribuye al fortalecimiento del sistema inmunológico y al mantenimiento de los huesos. Por su presentación en caja Tetrabrik con abre fácil, se adapta a cualquier momento y lugar.", 4.20));
+        productoLechesList.add(new ProductoLeches("Leche Gloria Evapo. Lata 400g", "leche_gloria_morado", "Hecha con leche fluida de la mejor calidad, tiene una textura ligera y un delicioso sabor. Aporta nutrientes propios de la leche como proteínas de alta calidad, calcio y fósforo, que promueven el crecimiento, conservan la masa muscular y mantienen huesos y dientes. Además, está enriquecida con vitaminas A y D.", 3.60));
+        productoLechesList.add(new ProductoLeches("Leche Laive Sin Lactosa Bolsa 900ml", "leche_laive_bolsa", "Elaborada con 100% leche de vaca.\n" +
+                                                                                                                                "Fuente de calcio.\n" +
+                                                                                                                                "Sin perservantes.\n" +
+                                                                                                                                "¡Sin lactosa, Sin molestias!\n" +
+                                                                                                                                "Disfruta nuevamente de los beneficios nutricionales de la leche sin sentir molestias, gracias a LAIVE SIN LACTOSA.", 4.70));
 
         adapter3=new ProductoLechesAdaptor(productoLechesList);
         recyclerViewProductoLechesList.setAdapter(adapter3);
