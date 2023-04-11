@@ -40,7 +40,7 @@
             android:id="@+id/sol"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="75dp"
             android:layout_marginTop="50dp"
             android:layout_toEndOf="@id/recImage"
             android:text="S/."
@@ -51,7 +51,7 @@
             android:id="@+id/recPrecio"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:layout_marginStart="40dp"
+            android:layout_marginStart="100dp"
             android:layout_marginTop="50dp"
             android:layout_toEndOf="@id/recImage"
             android:text="0.0"
@@ -71,7 +71,17 @@
             android:textColor="@color/white"
             android:textSize="19sp" />
 
-        
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="50dp"
+            android:layout_toEndOf="@+id/recImage"
+            android:text="Precio:"
+            android:textSize="17sp" />
+
+
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>
