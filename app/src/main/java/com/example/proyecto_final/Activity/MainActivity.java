@@ -73,11 +73,37 @@ public class MainActivity extends AppCompatActivity {
         adapter.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                //Toast.makeText(getApplicationContext(), "Seleccion: " + categoria.get(recyclerViewCategoriaList.getChildAdapterPosition(view)).getTitle(), Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(getApplicationContext(), BebidasActivity.class);
-                startActivity(intent);
+                String posinom = categoria.get(recyclerViewCategoriaList.getChildAdapterPosition(view)).getTitle();
+                Toast.makeText(getApplicationContext(), "Seleccion: " + posinom, Toast.LENGTH_SHORT).show();
 
-                ArrayList<CategoryAdaptor> cat = new ArrayList<>();
+                switch (posinom){
+                    case "BEBIDAS":{
+                        Intent intent = new Intent(getApplicationContext(), BebidasActivity.class);
+                        startActivity(intent);
+                        break;
+                    }
+                    case "SNACKS":{
+                        Intent intent = new Intent(getApplicationContext(), SnacksActivity.class);
+                        startActivity(intent);
+                        break;
+                    }
+                    case "LIMPIEZA":{
+                        Intent intent = new Intent(getApplicationContext(), LimpiezaActivity.class);
+                        startActivity(intent);
+                        break;
+                    }
+                    case "CUIDADO.P":{
+                        Intent intent = new Intent(getApplicationContext(), CuidadoPersonalActivity.class);
+                        startActivity(intent);
+                        break;
+                    }
+                    case "MASCOTA":{
+                        Intent intent = new Intent(getApplicationContext(), MascotaActivity.class);
+                        startActivity(intent);
+                        break;
+                    }
+                }
+
 
             }
         });

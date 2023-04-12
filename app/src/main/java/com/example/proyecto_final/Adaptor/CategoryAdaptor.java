@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.proyecto_final.Activity.BebidasActivity;
+import com.example.proyecto_final.Activity.BuscadorActivity;
 import com.example.proyecto_final.Activity.MenuActivity;
 import com.example.proyecto_final.Domain.CategoryDomain;
 import com.example.proyecto_final.R;
@@ -37,6 +38,7 @@ public class CategoryAdaptor extends RecyclerView.Adapter<CategoryAdaptor.ViewHo
         inflate.setOnClickListener(this);
         return new ViewHolder(inflate);
     }
+
 
     @Override
     public void onBindViewHolder(@NonNull CategoryAdaptor.ViewHolder holder, int position) {
