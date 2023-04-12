@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Proyecto_Final"
         tools:targetApi="31">
+        <activity
+            android:name=".Activity.BebidasActivity"
+            android:exported="true" />
         <activity
             android:name=".Activity.LoginRegistrar"
             android:exported="true" />
@@ -30,7 +33,8 @@
             android:exported="false" />
         <activity
             android:name=".Activity.BuscadorActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
         <activity
             android:name=".Activity.ShowDetail2Activity"
             android:exported="true" />

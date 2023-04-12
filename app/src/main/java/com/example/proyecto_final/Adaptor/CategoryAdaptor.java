@@ -1,5 +1,8 @@
 package com.example.proyecto_final.Adaptor;
 
+import static androidx.core.content.ContextCompat.startActivity;
+
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,13 +15,16 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.proyecto_final.Activity.BebidasActivity;
+import com.example.proyecto_final.Activity.MenuActivity;
 import com.example.proyecto_final.Domain.CategoryDomain;
 import com.example.proyecto_final.R;
 
 import java.util.ArrayList;
 
-public class CategoryAdaptor extends RecyclerView.Adapter<CategoryAdaptor.ViewHolder> {
+public class CategoryAdaptor extends RecyclerView.Adapter<CategoryAdaptor.ViewHolder> implements View.OnClickListener {
     ArrayList<CategoryDomain> categoryDomains;
+    private View.OnClickListener listener;
 
     public CategoryAdaptor(ArrayList<CategoryDomain> categoryDomains) {
         this.categoryDomains = categoryDomains;
@@ -27,6 +33,8 @@ public class CategoryAdaptor extends RecyclerView.Adapter<CategoryAdaptor.ViewHo
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_category,parent,false);
+
+        inflate.setOnClickListener(this);
         return new ViewHolder(inflate);
     }
 
@@ -73,6 +81,17 @@ public class CategoryAdaptor extends RecyclerView.Adapter<CategoryAdaptor.ViewHo
     @Override
     public int getItemCount() {
         return categoryDomains.size();
+    }
+
+    public void setOnClickListener(View.OnClickListener listener){
+        this.listener=listener;
+    }
+
+    @Override
+    public void onClick(View view) {
+        if (listener!=null){
+            listener.onClick(view);
+        }
     }
 
     public class ViewHolder extends  RecyclerView.ViewHolder{

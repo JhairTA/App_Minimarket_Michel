@@ -4,21 +4,27 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.proyecto_final.Adaptor.AdapterProducto;
 import com.example.proyecto_final.R;
 import com.example.proyecto_final.pojo.Productos;
+import com.google.android.material.bottomappbar.BottomAppBar;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
+import android.util.TypedValue;
 import android.view.View;
+import android.view.ViewTreeObserver;
 
 import java.util.ArrayList;
 
@@ -29,6 +35,9 @@ public class BuscadorActivity extends AppCompatActivity {
     SearchView searchView;
     AdapterProducto adapter;
     LinearLayoutManager lm;
+
+    CoordinatorLayout menu;
+
     private Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +52,7 @@ public class BuscadorActivity extends AppCompatActivity {
         rv = findViewById(R.id.recyclerView);
         searchView = findViewById(R.id.search);
         lm = new LinearLayoutManager((this));
+        menu= findViewById(R.id.menu);
 
         rv.setLayoutManager(lm);
         list = new ArrayList<>();
@@ -79,8 +89,32 @@ public class BuscadorActivity extends AppCompatActivity {
                 return true;
             }
         });
+
+        //*****************************************************************************
+        final Context c = this;
+        final View activityRootView = findViewById(R.id.activityRoot);
+        activityRootView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+                int heightDiff = activityRootView.getRootView().getHeight() - activityRootView.getHeight();
+                if (heightDiff > dpToPx(c, 200)) {
+                    menu.setVisibility(View.GONE); // Lo haces invisible y que no ocupe espacio.
+                }
+                else {
+                    menu.setVisibility(View.VISIBLE); // Lo haces visible
+                }
+            }
+        });
+        //*****************************************************************************
+
     }
 
+    //*****************************************************************************
+    public static float dpToPx(Context context, float valueInDp) {
+        DisplayMetrics metrics = context.getResources().getDisplayMetrics();
+        return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, valueInDp, metrics);
+    }
+    //*****************************************************************************
     private void buscar(String s){
         ArrayList<Productos> milista = new ArrayList<>();
         for (Productos obj: list){

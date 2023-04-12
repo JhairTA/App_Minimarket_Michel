@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.example.proyecto_final.Adaptor.CategoryAdaptor;
 import com.example.proyecto_final.Adaptor.ProductoLechesAdaptor;
@@ -68,7 +69,18 @@ public class MainActivity extends AppCompatActivity {
         categoria.add(new CategoryDomain("CUIDADO.P", "cuidadopersonal"));
         categoria.add(new CategoryDomain("MASCOTA", "mascota"));
 
-        adapter=new CategoryAdaptor(categoria);
+        CategoryAdaptor adapter=new CategoryAdaptor(categoria);
+        adapter.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                //Toast.makeText(getApplicationContext(), "Seleccion: " + categoria.get(recyclerViewCategoriaList.getChildAdapterPosition(view)).getTitle(), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), BebidasActivity.class);
+                startActivity(intent);
+
+                ArrayList<CategoryAdaptor> cat = new ArrayList<>();
+
+            }
+        });
         recyclerViewCategoriaList.setAdapter(adapter);
     }
 
