@@ -104,16 +104,16 @@ public class BebidasActivity extends AppCompatActivity {
         recyclerViewAguaList.setLayoutManager(linearLayoutManager);
 
         ArrayList<ProductoGeneral> productoAguasList = new ArrayList<>();
-        productoAguasList.add(new ProductoGeneral("dfdf", "yogurt_gloria", "fdsf",5.60));
-        productoAguasList.add(new ProductoGeneral("dfdf", "yogurt_gloria", "fdsf",5.60));
-        productoAguasList.add(new ProductoGeneral("dfdf", "yogurt_gloria", "fdsf",5.60));
-        productoAguasList.add(new ProductoGeneral("dfdf", "yogurt_gloria", "fdsf",5.60));
-        productoAguasList.add(new ProductoGeneral("dfdf", "yogurt_gloria", "fdsf",5.60));
-        productoAguasList.add(new ProductoGeneral("dfdf", "yogurt_gloria", "fdsf",5.60));
-        productoAguasList.add(new ProductoGeneral("dfdf", "yogurt_gloria", "fdsf",5.60));
-        productoAguasList.add(new ProductoGeneral("dfdf", "yogurt_gloria", "fdsf",5.60));
-        productoAguasList.add(new ProductoGeneral("dfdf", "yogurt_gloria", "fdsf",5.60));
-        productoAguasList.add(new ProductoGeneral("dfdf", "yogurt_gloria", "fdsf",5.60));
+        productoAguasList.add(new ProductoGeneral("Agua Cielo Botella 600ml", "agua_cielo", "fdsf",1.50));
+        productoAguasList.add(new ProductoGeneral("Agua San Luis Botella 625ml", "agua_sanluis", "fdsf",1.30));
+        productoAguasList.add(new ProductoGeneral("Agua San Carlos Botella 500ml", "agua_sancarlos", "fdsf",3.70));
+        productoAguasList.add(new ProductoGeneral("Agua Loa Botella 625ml", "agua_loa", "fdsf",1.20));
+        productoAguasList.add(new ProductoGeneral("Agua San Mateo Botella 600ml", "agua_sanmateo", "fdsf",1.50));
+        productoAguasList.add(new ProductoGeneral("Agua Socosani Botella 500ml", "agua_socosani", "fdsf",6.40));
+        productoAguasList.add(new ProductoGeneral("Agua Pura Vida Botella 635ml", "agua_puravida", "fdsf",1.20));
+        productoAguasList.add(new ProductoGeneral("Agua Bells Sin Gas Botella 2.5L", "agua_bells", "fdsf",2.29));
+        productoAguasList.add(new ProductoGeneral("Agua Benedictino Botella 600ml", "agua_benedictino", "fdsf",4.99));
+        productoAguasList.add(new ProductoGeneral("Agua San Luis Bidón 7L", "agua_sanluisbidon", "fdsf",22.50));
 
         adapter2 = new ProductoAguasAdaptor(productoAguasList);
         recyclerViewAguaList.setAdapter(adapter2);
@@ -125,16 +125,16 @@ public class BebidasActivity extends AppCompatActivity {
         recyclerViewGaseosaList.setLayoutManager(linearLayoutManager);
 
         ArrayList<ProductoGeneral> productoGaseosasList = new ArrayList<>();
-        productoGaseosasList.add(new ProductoGeneral("dfdf", "yogurt_gloria", "fdsf",5.60));
-        productoGaseosasList.add(new ProductoGeneral("dfdf", "yogurt_gloria", "fdsf",5.60));
-        productoGaseosasList.add(new ProductoGeneral("dfdf", "yogurt_gloria", "fdsf",5.60));
-        productoGaseosasList.add(new ProductoGeneral("dfdf", "yogurt_gloria", "fdsf",5.60));
-        productoGaseosasList.add(new ProductoGeneral("dfdf", "yogurt_gloria", "fdsf",5.60));
-        productoGaseosasList.add(new ProductoGeneral("dfdf", "yogurt_gloria", "fdsf",5.60));
-        productoGaseosasList.add(new ProductoGeneral("dfdf", "yogurt_gloria", "fdsf",5.60));
-        productoGaseosasList.add(new ProductoGeneral("dfdf", "yogurt_gloria", "fdsf",5.60));
-        productoGaseosasList.add(new ProductoGeneral("dfdf", "yogurt_gloria", "fdsf",5.60));
-        productoGaseosasList.add(new ProductoGeneral("dfdf", "yogurt_gloria", "fdsf",5.60));
+        productoGaseosasList.add(new ProductoGeneral("Gaseosa Inca Kola Botella 500ml", "gaseosa_incakola", "fdsf",1.70));
+        productoGaseosasList.add(new ProductoGeneral("Gaseosa Coca Cola Botella 600ml", "gaseosa_cocacola", "fdsf",2.60));
+        productoGaseosasList.add(new ProductoGeneral("Gaseosa Fanta Naranja Botella 500ml", "gaseosa_fanta", "fdsf",2.50));
+        productoGaseosasList.add(new ProductoGeneral("Gaseosa Sprite Botella 500ml", "gaseosa_sprite", "fdsf",2.30));
+        productoGaseosasList.add(new ProductoGeneral("Gaseosa Pepsi Botella 500ml", "gaseosa_pepsi", "fdsf",2.20));
+        productoGaseosasList.add(new ProductoGeneral("Gaseosa Guarana Botella 450ml", "gaseosa_guarana", "fdsf",2.10));
+        productoGaseosasList.add(new ProductoGeneral("Gaseosa Viva Backus Botella 450ml", "gaseosa_viva", "fdsf",1.20));
+        productoGaseosasList.add(new ProductoGeneral("Gaseosa Concordia Botella 500ml", "gaseosa_concordia", "fdsf",2.70));
+        productoGaseosasList.add(new ProductoGeneral("Gaseosa 7UP Botella 355ml", "gaseosa_7up", "fdsf",1.20));
+        productoGaseosasList.add(new ProductoGeneral("Gaseosa Crush Botella 450ml", "gaseosa_crush", "fdsf",1.90));
 
         adapter3 = new ProductoGaseosasAdaptor(productoGaseosasList);
         recyclerViewGaseosaList.setAdapter(adapter3);
