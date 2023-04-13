@@ -1,6 +1,8 @@
 package com.example.proyecto_final.Domain;
 
-public class ProductoGeneral {
+import java.io.Serializable;
+
+public class ProductoGeneral implements Serializable {
     private String title;
     private String pic;
     private String description;

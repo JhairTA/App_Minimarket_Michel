@@ -44,6 +44,21 @@ public class BebidasActivity extends AppCompatActivity {
         recyclerViewProductoJugos();
     }
 
+    public void buscar(View view){
+        Intent intent =new Intent(this, BuscadorActivity.class);
+        startActivity(intent);
+    }
+
+    public void inicio(View view){
+        Intent intent =new Intent(this, InicioActivity.class);
+        startActivity(intent);
+    }
+
+    public void menu(View view){
+        Intent intent =new Intent(this, MenuActivity.class);
+        startActivity(intent);
+    }
+
     private void recyclerViewCategoria() {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         recyclerViewCategoriaList = findViewById(R.id.rv1);
@@ -146,16 +161,16 @@ public class BebidasActivity extends AppCompatActivity {
         recyclerViewJugoList.setLayoutManager(linearLayoutManager);
 
         ArrayList<ProductoGeneral> productoJugosList = new ArrayList<>();
-        productoJugosList.add(new ProductoGeneral("dfdf", "yogurt_gloria", "fdsf",5.60));
-        productoJugosList.add(new ProductoGeneral("dfdf", "yogurt_gloria", "fdsf",5.60));
-        productoJugosList.add(new ProductoGeneral("dfdf", "yogurt_gloria", "fdsf",5.60));
-        productoJugosList.add(new ProductoGeneral("dfdf", "yogurt_gloria", "fdsf",5.60));
-        productoJugosList.add(new ProductoGeneral("dfdf", "yogurt_gloria", "fdsf",5.60));
-        productoJugosList.add(new ProductoGeneral("dfdf", "yogurt_gloria", "fdsf",5.60));
-        productoJugosList.add(new ProductoGeneral("dfdf", "yogurt_gloria", "fdsf",5.60));
-        productoJugosList.add(new ProductoGeneral("dfdf", "yogurt_gloria", "fdsf",5.60));
-        productoJugosList.add(new ProductoGeneral("dfdf", "yogurt_gloria", "fdsf",5.60));
-        productoJugosList.add(new ProductoGeneral("dfdf", "yogurt_gloria", "fdsf",5.60));
+        productoJugosList.add(new ProductoGeneral("Frugos Durazno Caja 235ml", "jugo_frugos", "fdsf",3.50));
+        productoJugosList.add(new ProductoGeneral("Bebida Gloria Naranja Caja 1L", "jugo_gloria", "fdsf",3.90));
+        productoJugosList.add(new ProductoGeneral("Chica Morada Naturale Botella 500ml", "jugo_naturale", "fdsf",4.50));
+        productoJugosList.add(new ProductoGeneral("Tampico Citrus Punch Botella 600ml", "jugo_tampico", "fdsf",3.50));
+        productoJugosList.add(new ProductoGeneral("Bio Amayu Arandano Botella 300ml", "jugo_bioamayu", "fdsf",3.50));
+        productoJugosList.add(new ProductoGeneral("Refresco Clight Sobre Doble 14g", "jugo_clight", "fdsf",2.09));
+        productoJugosList.add(new ProductoGeneral("Cifrut Citrus Punch Botella 350ml", "jugo_cifrut", "fdsf",2.20));
+        productoJugosList.add(new ProductoGeneral("Refresco Instantaneo Zuko Sobre 15g", "jugo_zuko", "fdsf",1.20));
+        productoJugosList.add(new ProductoGeneral("Umsha Chica Morada Bolsa 13g", "jugo_umsha", "fdsf",1.10));
+        productoJugosList.add(new ProductoGeneral("Bebida Frutaris Botella 500ml", "jugo_frutaris", "fdsf",1.50));
 
         adapter4 = new ProductoJugosAdaptor(productoJugosList);
         recyclerViewJugoList.setAdapter(adapter4);

@@ -1,5 +1,6 @@
 package com.example.proyecto_final.Adaptor;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.proyecto_final.Activity.ShowDetailGeneralActivity;
 import com.example.proyecto_final.Domain.ProductoGeneral;
 import com.example.proyecto_final.R;
 
@@ -36,14 +38,14 @@ public class ProductoJugosAdaptor extends RecyclerView.Adapter<ProductoJugosAdap
         int drawableResourceId = holder.itemView.getContext().getResources().getIdentifier(productoJugo.get(position).getPic(), "drawable", holder.itemView.getContext().getPackageName());
         Glide.with(holder.itemView.getContext()).load(drawableResourceId).into(holder.pic);
 
-        /*holder.addBtn.setOnClickListener(new View.OnClickListener() {
+        holder.addBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(holder.itemView.getContext(), ShowDetail2Activity.class);
-                intent.putExtra("object", productoAgua.get(position));
+                Intent intent = new Intent(holder.itemView.getContext(), ShowDetailGeneralActivity.class);
+                intent.putExtra("object", productoJugo.get(position));
                 holder.itemView.getContext().startActivity(intent);
             }
-        });*/
+        });
     }
 
     @Override

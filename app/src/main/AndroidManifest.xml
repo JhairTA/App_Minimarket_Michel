@@ -48,6 +48,9 @@
             android:exported="true"
             android:windowSoftInputMode="stateVisible|adjustResize" />
         <activity
+            android:name=".Activity.ShowDetailGeneralActivity"
+            android:exported="true" />
+        <activity
             android:name=".Activity.ShowDetail2Activity"
             android:exported="true" />
         <activity

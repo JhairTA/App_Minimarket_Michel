@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.proyecto_final.Activity.ShowDetail2Activity;
+import com.example.proyecto_final.Activity.ShowDetailGeneralActivity;
 import com.example.proyecto_final.Domain.ProductoGeneral;
 import com.example.proyecto_final.Domain.ProductoLeches;
 import com.example.proyecto_final.R;
@@ -39,14 +40,14 @@ public class ProductoAguasAdaptor extends RecyclerView.Adapter<ProductoAguasAdap
         int drawableResourceId = holder.itemView.getContext().getResources().getIdentifier(productoAgua.get(position).getPic(), "drawable", holder.itemView.getContext().getPackageName());
         Glide.with(holder.itemView.getContext()).load(drawableResourceId).into(holder.pic);
 
-        /*holder.addBtn.setOnClickListener(new View.OnClickListener() {
+        holder.addBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(holder.itemView.getContext(), ShowDetail2Activity.class);
+                Intent intent = new Intent(holder.itemView.getContext(), ShowDetailGeneralActivity.class);
                 intent.putExtra("object", productoAgua.get(position));
                 holder.itemView.getContext().startActivity(intent);
             }
-        });*/
+        });
     }
 
     @Override

@@ -17,11 +17,11 @@ import com.example.proyecto_final.R;
 
 import java.util.ArrayList;
 
-public class ProductoGaseosasAdaptor extends RecyclerView.Adapter<ProductoGaseosasAdaptor.ViewHolder> {
-    ArrayList<ProductoGeneral> productoGaseosa;
+public class ProductoSnacksAdaptor extends RecyclerView.Adapter<ProductoSnacksAdaptor.ViewHolder> {
+    ArrayList<ProductoGeneral> productoSnack;
 
-    public ProductoGaseosasAdaptor(ArrayList<ProductoGeneral> categoryProduct1) {
-        this.productoGaseosa = categoryProduct1;
+    public ProductoSnacksAdaptor(ArrayList<ProductoGeneral> categoryProduct1) {
+        this.productoSnack = categoryProduct1;
     }
 
     @Override
@@ -31,18 +31,18 @@ public class ProductoGaseosasAdaptor extends RecyclerView.Adapter<ProductoGaseos
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ProductoGaseosasAdaptor.ViewHolder holder, int position) {
-        holder.title.setText(productoGaseosa.get(position).getTitle());
-        holder.fee.setText(String.valueOf(productoGaseosa.get(position).getFee()));
+    public void onBindViewHolder(@NonNull ProductoSnacksAdaptor.ViewHolder holder, int position) {
+        holder.title.setText(productoSnack.get(position).getTitle());
+        holder.fee.setText(String.valueOf(productoSnack.get(position).getFee()));
 
-        int drawableResourceId = holder.itemView.getContext().getResources().getIdentifier(productoGaseosa.get(position).getPic(), "drawable", holder.itemView.getContext().getPackageName());
+        int drawableResourceId = holder.itemView.getContext().getResources().getIdentifier(productoSnack.get(position).getPic(), "drawable", holder.itemView.getContext().getPackageName());
         Glide.with(holder.itemView.getContext()).load(drawableResourceId).into(holder.pic);
 
         holder.addBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(holder.itemView.getContext(), ShowDetailGeneralActivity.class);
-                    intent.putExtra("object", productoGaseosa.get(position));
+                intent.putExtra("object", productoSnack.get(position));
                 holder.itemView.getContext().startActivity(intent);
             }
         });
@@ -50,7 +50,7 @@ public class ProductoGaseosasAdaptor extends RecyclerView.Adapter<ProductoGaseos
 
     @Override
     public int getItemCount() {
-        return productoGaseosa.size();
+        return productoSnack.size();
     }
 
     public class ViewHolder extends  RecyclerView.ViewHolder{

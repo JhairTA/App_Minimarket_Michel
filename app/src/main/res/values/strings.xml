@@ -6,6 +6,8 @@
     <string name="agua">Aguas</string>
     <string name="gaseosa">Gaseosas</string>
     <string name="jugos">Jugos y Otras Bebidas</string>
+    <string name="snacks">Snacks y Piqueos</string>
+    <string name="galleta">Galletas</string>
 
     <string name="inicio">Inicio</string>
     <string name="categoria">Categoria</string>
