@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.proyecto_final.Adaptor.CategoryAdaptor;
 import com.example.proyecto_final.Adaptor.ProductoCuidadoBucalAdaptor;
+import com.example.proyecto_final.Adaptor.ProductoHigienePersonalAdaptor;
 import com.example.proyecto_final.Adaptor.ProductoYogurtsAdaptor;
 import com.example.proyecto_final.Domain.CategoryDomain;
 import com.example.proyecto_final.Domain.ProductoGeneral;
@@ -26,7 +27,7 @@ public class CuidadoPersonalActivity extends AppCompatActivity {
 
     private RecyclerView.Adapter adapter, adapter2, adapter3;
 
-    private RecyclerView recyclerViewCategoriaList, recyclerViewProductoCuidadoBucalList, recyclerViewProductoLechesList;
+    private RecyclerView recyclerViewCategoriaList, recyclerViewProductoCuidadoBucalList, recyclerViewProductoHigienePersonalList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +40,22 @@ public class CuidadoPersonalActivity extends AppCompatActivity {
 
         recyclerViewCategoria();
         recyclerViewProductoCuidadoBucal();
+        recyclerViewProductoHigienePersonal();
+    }
+
+    public void buscar(View view){
+        Intent intent =new Intent(this, BuscadorActivity.class);
+        startActivity(intent);
+    }
+
+    public void inicio(View view){
+        Intent intent =new Intent(this, InicioActivity.class);
+        startActivity(intent);
+    }
+
+    public void menu(View view){
+        Intent intent =new Intent(this, MenuActivity.class);
+        startActivity(intent);
     }
 
     private void recyclerViewCategoria() {
@@ -114,5 +131,26 @@ public class CuidadoPersonalActivity extends AppCompatActivity {
 
         adapter2=new ProductoCuidadoBucalAdaptor(productoCuidadoBucalList);
         recyclerViewProductoCuidadoBucalList.setAdapter(adapter2);
+    }
+
+    private void recyclerViewProductoHigienePersonal(){
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        recyclerViewProductoHigienePersonalList = findViewById(R.id.rv3);
+        recyclerViewProductoHigienePersonalList.setLayoutManager(linearLayoutManager);
+
+        ArrayList<ProductoGeneral> productoHigienePersonalList = new ArrayList<>();
+        productoHigienePersonalList.add(new ProductoGeneral("Jabón Dove Cremoso Original 3un", "hp_dove", "fdsf",11.70));
+        productoHigienePersonalList.add(new ProductoGeneral("Moncler Jabón Azul Barra 145g ", "hp_moncler", "fdsf",5.10));
+        productoHigienePersonalList.add(new ProductoGeneral("Desodorante Axe Epic Fres 150ml", "hp_axe", "fdsf",12.90));
+        productoHigienePersonalList.add(new ProductoGeneral("Jabón en Barra Protex Fresh", "hp_protex", "fdsf",3.20));
+        productoHigienePersonalList.add(new ProductoGeneral("Desodorante Lady Speed Stick Barra 45g", "hp_ladyspeed", "fdsf",19.30));
+        productoHigienePersonalList.add(new ProductoGeneral("Desodorante Rexona Invisible X 150ml", "hp_rexona", "fdsf",17.58));
+        productoHigienePersonalList.add(new ProductoGeneral("H&S Classic Clean 650ml", "hp_hs", "fdsf",10.50));
+        productoHigienePersonalList.add(new ProductoGeneral("Desodorante Old Spice - Spray 150ml", "hp_oldspice", "fdsf",17.40));
+        productoHigienePersonalList.add(new ProductoGeneral("Jabón Liquido Aval Frutos Rojos 800ml", "hp_aval", "fdsf",13.20));
+        productoHigienePersonalList.add(new ProductoGeneral("Nivea Soft Crema Humectante X 100 ml", "hp_nivea", "fdsf",18.90));
+
+        adapter3=new ProductoHigienePersonalAdaptor(productoHigienePersonalList);
+        recyclerViewProductoHigienePersonalList.setAdapter(adapter3);
     }
 }

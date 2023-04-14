@@ -6,7 +6,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.proyecto_final.Adaptor.CategoryAdaptor;
+import com.example.proyecto_final.Adaptor.ProductoGatoAdaptor;
+import com.example.proyecto_final.Adaptor.ProductoPerroAdaptor;
 import com.example.proyecto_final.Domain.CategoryDomain;
+import com.example.proyecto_final.Domain.ProductoGeneral;
 import com.example.proyecto_final.R;
 
 import android.content.Intent;
@@ -20,7 +23,8 @@ public class MascotaActivity extends AppCompatActivity {
 
     private Toolbar toolbar1;
 
-    private RecyclerView recyclerViewCategoriaList;
+    private RecyclerView.Adapter adapter, adapter2, adapter3;
+    private RecyclerView recyclerViewCategoriaList, recyclerViewPerroList,recyclerViewGatoList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +36,23 @@ public class MascotaActivity extends AppCompatActivity {
         setSupportActionBar(toolbar1);
 
         recyclerViewCategoria();
+        recyclerViewProductoPerro();
+        recyclerViewProductoGato();
+    }
+
+    public void buscar(View view){
+        Intent intent =new Intent(this, BuscadorActivity.class);
+        startActivity(intent);
+    }
+
+    public void inicio(View view){
+        Intent intent =new Intent(this, InicioActivity.class);
+        startActivity(intent);
+    }
+
+    public void menu(View view){
+        Intent intent =new Intent(this, MenuActivity.class);
+        startActivity(intent);
     }
 
     private void recyclerViewCategoria() {
@@ -86,5 +107,47 @@ public class MascotaActivity extends AppCompatActivity {
             }
         });
         recyclerViewCategoriaList.setAdapter(adapter);
+    }
+
+    private void recyclerViewProductoPerro(){
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        recyclerViewPerroList = findViewById(R.id.rv2);
+        recyclerViewPerroList.setLayoutManager(linearLayoutManager);
+
+        ArrayList<ProductoGeneral> productoPerroList = new ArrayList<>();
+        productoPerroList.add(new ProductoGeneral("Comida para Perros Ricocan Bolsa 15kg", "p_ricocan", "fdsf",74.90));
+        productoPerroList.add(new ProductoGeneral("Comida para Perros Mimaskot Bolsa 15kg", "p_mimaskot", "fdsf",107.80));
+        productoPerroList.add(new ProductoGeneral("Comida para Perros Bells Bolsa 25kg", "p_bells", "fdsf",95.60));
+        productoPerroList.add(new ProductoGeneral("Comida para Perros Dog Chow Bolsa 100g", "p_dogchow", "fdsf",4.30));
+        productoPerroList.add(new ProductoGeneral("Comida para Perros Nutrican Bolsa 25kg", "p_nutrican", "fdsf",129.20));
+        productoPerroList.add(new ProductoGeneral("Comida para Perros Pedigree Bolsa 100g", "p_pedrigree", "fdsf",4.10));
+        productoPerroList.add(new ProductoGeneral("Comida para Perros Pet Care Bolsa 95g", "p_petcare", "fdsf",3.00));
+        productoPerroList.add(new ProductoGeneral("Pro Plan Puppy Complete Bolsa 20kg", "p_proplan", "fdsf",113.90));
+        productoPerroList.add(new ProductoGeneral("Comida para Perros Purina One Bolsa 6kg", "p_purinaone", "fdsf",38.60));
+        productoPerroList.add(new ProductoGeneral("Snacks para Perros Gnawlers Bolsa 8un", "p_gnawlers", "fdsf",10.90));
+
+        adapter2 = new ProductoPerroAdaptor(productoPerroList);
+        recyclerViewPerroList.setAdapter(adapter2);
+    }
+
+    private void recyclerViewProductoGato(){
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        recyclerViewGatoList = findViewById(R.id.rv3);
+        recyclerViewGatoList.setLayoutManager(linearLayoutManager);
+
+        ArrayList<ProductoGeneral> productoGatoList = new ArrayList<>();
+        productoGatoList.add(new ProductoGeneral("Comida para Gatos Ricocat Bolsa 9Kg", "cg_ricocat", "fdsf",94.50));
+        productoGatoList.add(new ProductoGeneral("Comida para Gatos Bells Bolsa 1Kg", "cg_bells", "fdsf",9.90));
+        productoGatoList.add(new ProductoGeneral("Comida para Gatos Purina One Bolsa 2Kg", "cg_purinaone", "fdsf",7.10));
+        productoGatoList.add(new ProductoGeneral("Comida para Gatos Mimaskot Bolsa 9Kg", "cg_mimaskot", "fdsf",85.50));
+        productoGatoList.add(new ProductoGeneral("Comida para Gatos Whiskas Bolsa 9Kg", "cg_whiskas", "fdsf",131.20));
+        productoGatoList.add(new ProductoGeneral("Comida para Gatos Cat Chow Bolsa 8Kg", "cg_catchow", "fdsf",114.90));
+        productoGatoList.add(new ProductoGeneral("Comida para Gatos Sheba Sobre 85g", "cg_sheba", "fdsf",4.20));
+        productoGatoList.add(new ProductoGeneral("Comida para Gatos Felix Pouch x 85Gr", "cg_felix", "fdsf",3.50));
+        productoGatoList.add(new ProductoGeneral("Comida para Gatos Fancy Feast Lata 85g", "cg_fancyfeast", "fdsf",6.40));
+        productoGatoList.add(new ProductoGeneral("Arena para Gatos Cool Cat Bolsa 10Kg", "cg_coolcat", "fdsf",29.50));
+
+        adapter3 = new ProductoGatoAdaptor(productoGatoList);
+        recyclerViewGatoList.setAdapter(adapter3);
     }
 }

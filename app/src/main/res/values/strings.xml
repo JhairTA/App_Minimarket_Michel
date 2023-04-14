@@ -12,6 +12,8 @@
     <string name="cuidadohogar">Cuidado del Hogar</string>
     <string name="cuidadobucal">Cuidado Bucal</string>
     <string name="higiene">Higiene Personal</string>
+    <string name="perro">Perros</string>
+    <string name="gatos">Gatos</string>
 
     <string name="inicio">Inicio</string>
     <string name="categoria">Categoria</string>
