@@ -3,26 +3,27 @@ package com.example.proyecto_final.Helper;
 import android.content.Context;
 import android.widget.Toast;
 
-import com.example.proyecto_final.Domain.ProductoYogurts;
+import com.example.proyecto_final.Domain.Producto;
 import com.example.proyecto_final.Interface.ChangeNumberItemsListener;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 
 import java.util.ArrayList;
 
-public class ManagementCart {
+public class ManagementCart3 {
     private Context context;
-    private TinyDB tinyDB;
-
-    public ManagementCart(Context context) {
+    private TinyDB3 tinyDB3;
+    public ManagementCart3(Context context) {
         this.context = context;
-        this.tinyDB=new TinyDB(context);
+        this.tinyDB3= new TinyDB3(context);
     }
 
-    public void insertYogurt(ProductoYogurts item){
-        ArrayList<ProductoYogurts> listYogurts= getListCart();
+    public void insertProducto(Producto item){
+        ArrayList<Producto> productosList= getListCart();
         boolean existAlready = false;
         int n = 0;
-        for (int i = 0; i < listYogurts.size(); i++){
-            if (listYogurts.get(i).getTitle().equals(item.getTitle())){
+        for (int i = 0; i < productosList.size(); i++){
+            if (productosList.get(i).getTitle().equals(item.getTitle())){
                 existAlready=true;
                 n=i;
                 break;
@@ -30,40 +31,38 @@ public class ManagementCart {
         }
 
         if (existAlready){
-            listYogurts.get(n).setNumberInCart(item.getNumberInCart());
+            productosList.get(n).setNumberInCart(item.getNumberInCart());
         }else{
-            listYogurts.add(item);
+            productosList.add(item);
         }
-        tinyDB.putListObject("CartList", listYogurts);
+        tinyDB3.putListObject("CartList", productosList);
         Toast.makeText(context, "Agregado al carrito", Toast.LENGTH_SHORT).show();
     }
 
-    public ArrayList<ProductoYogurts> getListCart(){
-        return tinyDB.getListObject("CartList");
+    public ArrayList<Producto> getListCart(){
+        return tinyDB3.getListObject("CartList");
     }
 
-    public void plusNumberFood(ArrayList<ProductoYogurts> listFood, int position, ChangeNumberItemsListener changeNumberItemsListener){
+    public void plusNumberFood(ArrayList<Producto> listFood, int position, ChangeNumberItemsListener changeNumberItemsListener){
         listFood.get(position).setNumberInCart(listFood.get(position).getNumberInCart()+1);
-        tinyDB.putListObject("CartList",listFood);
+        tinyDB3.putListObject("CartList",listFood);
         changeNumberItemsListener.changed();
     }
-    public void minusNumberFood(ArrayList<ProductoYogurts> listFood,int position, ChangeNumberItemsListener changeNumberItemsListener){
+    public void minusNumberFood(ArrayList<Producto> listFood,int position, ChangeNumberItemsListener changeNumberItemsListener){
         if(listFood.get(position).getNumberInCart()==1){
             listFood.remove(position);
         }else{
             listFood.get(position).setNumberInCart(listFood.get(position).getNumberInCart()-1);
         }
-        tinyDB.putListObject("CartList",listFood);
+        tinyDB3.putListObject("CartList",listFood);
         changeNumberItemsListener.changed();
     }
     public Double getTotalFee(){
-        ArrayList<ProductoYogurts> listFood=getListCart();
+        ArrayList<Producto> listFood=getListCart();
         double fee=0;
         for (int i=0;i< listFood.size();i++){
             fee=fee+(listFood.get(i).getFee()*listFood.get(i).getNumberInCart());
         }
-
         return fee;
     }
-
 }

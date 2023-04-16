@@ -1,45 +1,65 @@
 package com.example.proyecto_final.Domain;
 
-public class Producto {
-    int id;
-    String nombre;
-    String precio;
-    int recomendado;
-    String imagen;
+import java.io.Serializable;
 
-    public Producto(int id, String nombre, String precio, int recomendado, String imagen) {
-        this.id = id;
-        this.nombre = nombre;
-        this.precio = precio;
+public class Producto implements Serializable {
+    private String title;
+    private String pic;
+    private String description;
+    private double fee;
+    private int recomendado;
+    private int numberInCart;
+
+    public Producto(String title, String pic, String description, double fee, int recomendado) {
+        this.title = title;
+        this.pic = pic;
+        this.description = description;
+        this.fee = fee;
         this.recomendado = recomendado;
-        this.imagen = imagen;
     }
 
     public Producto() {
     }
 
-    public int getId() {
-        return id;
+    public Producto(String title, String pic, String description, double fee, int recomendado, int numberInCart) {
+        this.title = title;
+        this.pic = pic;
+        this.description = description;
+        this.fee = fee;
+        this.recomendado = recomendado;
+        this.numberInCart = numberInCart;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public String getTitle() {
+        return title;
     }
 
-    public String getNombre() {
-        return nombre;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public String getPic() {
+        return pic;
     }
 
-    public String getPrecio() {
-        return precio;
+    public void setPic(String pic) {
+        this.pic = pic;
     }
 
-    public void setPrecio(String precio) {
-        this.precio = precio;
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public double getFee() {
+        return fee;
+    }
+
+    public void setFee(double fee) {
+        this.fee = fee;
     }
 
     public int getRecomendado() {
@@ -50,11 +70,11 @@ public class Producto {
         this.recomendado = recomendado;
     }
 
-    public String getImagen() {
-        return imagen;
+    public int getNumberInCart() {
+        return numberInCart;
     }
 
-    public void setImagen(String imagen) {
-        this.imagen = imagen;
+    public void setNumberInCart(int numberInCart) {
+        this.numberInCart = numberInCart;
     }
 }

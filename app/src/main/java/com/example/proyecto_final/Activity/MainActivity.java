@@ -51,6 +51,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void carrito(View view){
+        Intent intent =new Intent(this, CarritoActivity.class);
+        startActivity(intent);
+    }
+
     public void menu(View view){
         Intent intent =new Intent(this, MenuActivity.class);
         startActivity(intent);

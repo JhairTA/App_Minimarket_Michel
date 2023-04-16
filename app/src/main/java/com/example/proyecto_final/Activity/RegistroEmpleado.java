@@ -59,7 +59,7 @@ public class RegistroEmpleado extends AppCompatActivity {
                 correo=cor.getText().toString();
                 contraseña=con.getText().toString();
 
-                HelperClassAdmin helperClass=new HelperClassAdmin(nombre,apellido,dni,usuario,telefono,correo,contraseña);
+                HelperClassAdmin helperClass=new HelperClassAdmin(nombre,apellido,dni,usuario,correo,telefono,contraseña);
                 reference.child(usuario).setValue(helperClass);
 
 

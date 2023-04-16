@@ -14,6 +14,24 @@
         android:theme="@style/Theme.Proyecto_Final"
         tools:targetApi="31">
         <activity
+            android:name=".Activity.LoginRegistrar"
+            android:exported="true" />
+        <activity
+            android:name=".Activity.CarritoActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ViewPedidos"
+            android:exported="false" />
+        <activity
+            android:name=".ViewPagos"
+            android:exported="false" />
+        <activity
+            android:name=".ViewBoleta"
+            android:exported="false" />
+        <activity
+            android:name=".ListaProductospedido"
+            android:exported="false" />
+        <activity
             android:name=".Activity.RegistroEmpleado"
             android:exported="true" />
         <activity
@@ -55,13 +73,13 @@
             android:windowSoftInputMode="stateVisible|adjustResize" />
         <activity
             android:name=".Activity.ShowDetailGeneralActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".Activity.ShowDetail2Activity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".Activity.ShowDetailActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".Activity.MainActivity"
             android:exported="true" />
@@ -74,6 +92,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
