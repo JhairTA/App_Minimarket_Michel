@@ -16,6 +16,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class LoginRegistrar extends AppCompatActivity {
 
@@ -30,6 +32,8 @@ public class LoginRegistrar extends AppCompatActivity {
     private String telefono="";
     private String correo="";
     private String contraseña="";
+    FirebaseDatabase database;
+    DatabaseReference reference;
     FirebaseAuth mAuth;
 
     @Override
@@ -52,19 +56,29 @@ public class LoginRegistrar extends AppCompatActivity {
         bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                nombre=n.getText().toString().trim();
-                apellido=ap.getText().toString().trim();
-                genero=n.getText().toString().trim();
-                ubicacion=ub.getText().toString().trim();
-                telefono=tel.getText().toString().trim();
-                correo=cor.getText().toString().trim();
-                contraseña=con.getText().toString().trim();
+
+                database= FirebaseDatabase.getInstance();
+                reference= database.getReference("Usuarios");
+
+
+                nombre=n.getText().toString();
+                apellido=ap.getText().toString();
+                genero=ge.getText().toString();
+                ubicacion=ub.getText().toString();
+                telefono=tel.getText().toString();
+                correo=cor.getText().toString();
+                contraseña=con.getText().toString();
+
+                HelperClass helperClass=new HelperClass(nombre,apellido,genero,ubicacion,telefono,correo,contraseña);
+                reference.child(apellido).setValue(helperClass);
+
+
 
                 if (!nombre.isEmpty() && !apellido.isEmpty() && !genero.isEmpty() && !ubicacion.isEmpty() && !telefono.isEmpty() && !correo.isEmpty() && !contraseña.isEmpty()){
                     if (contraseña.length()>=6){
                         mAuth.createUserWithEmailAndPassword(correo,contraseña).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
-                            public void onComplete(@NonNull  Task<AuthResult> task) {
+                            public void onComplete(@NonNull Task<AuthResult> task) {
                                 if(task.isSuccessful()){
                                     Toast.makeText(LoginRegistrar.this, "Usuario registrado correctamente", Toast.LENGTH_SHORT).show();
                                     startActivity(new Intent(LoginRegistrar.this,LoginIngresar.class));
