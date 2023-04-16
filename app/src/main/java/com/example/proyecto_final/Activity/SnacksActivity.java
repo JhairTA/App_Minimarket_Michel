@@ -75,7 +75,7 @@ public class SnacksActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 String posinom = categoria.get(recyclerViewCategoriaList.getChildAdapterPosition(view)).getTitle();
-                Toast.makeText(getApplicationContext(), "Seleccion: " + posinom, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Seccion: " + posinom, Toast.LENGTH_SHORT).show();
 
                 switch (posinom){
                     case "LACTEOS":{

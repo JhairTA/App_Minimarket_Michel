@@ -49,14 +49,13 @@
             android:windowSoftInputMode="stateVisible|adjustResize" />
         <activity
             android:name=".Activity.ShowDetailGeneralActivity"
-            android:exported="true" />
+            android:exported="true"/>
         <activity
             android:name=".Activity.ShowDetail2Activity"
-            android:exported="true" />
+            android:exported="true"/>
         <activity
             android:name=".Activity.ShowDetailActivity"
-            android:exported="true"
-            android:parentActivityName=".Activity.MainActivity" />
+            android:exported="true"/>
         <activity
             android:name=".Activity.MainActivity"
             android:exported="true" />

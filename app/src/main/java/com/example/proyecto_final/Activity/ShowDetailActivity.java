@@ -4,6 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,7 +18,6 @@ import com.example.proyecto_final.Helper.ManagementCart;
 import com.example.proyecto_final.R;
 
 public class ShowDetailActivity extends AppCompatActivity {
-    private Toolbar toolbar2;
     private TextView addToCartBtn;
     private TextView titleTxt, feeTxt, descriptionTxt, numberOrderTxt;
     private ImageView plusBtn, minusBtn, picFood;
@@ -30,16 +31,33 @@ public class ShowDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_detail);
 
-        toolbar2 = findViewById(R.id.toolbar2);
-        toolbar2.setTitle("Categoria > Yogurts");
-        setSupportActionBar(toolbar2);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        Toolbar toolbar = findViewById(R.id.toolbar2);
+        toolbar.setTitle("Categoria > Yogurts");
+        setSupportActionBar(toolbar);
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDisplayShowHomeEnabled(true);
+
 
         managementCart=new ManagementCart(this);
         initView();
         getBundle();
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    /*@Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }*/
 
     private void getBundle() {
         object=(ProductoYogurts) getIntent().getSerializableExtra("object");
