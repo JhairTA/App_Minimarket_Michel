@@ -54,6 +54,11 @@ public class BebidasActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void carrito(View view){
+        Intent intent =new Intent(this, CarritoActivity.class);
+        startActivity(intent);
+    }
+
     public void menu(View view){
         Intent intent =new Intent(this, MenuActivity.class);
         startActivity(intent);
@@ -140,16 +145,16 @@ public class BebidasActivity extends AppCompatActivity {
         recyclerViewGaseosaList.setLayoutManager(linearLayoutManager);
 
         ArrayList<ProductoGeneral> productoGaseosasList = new ArrayList<>();
-        productoGaseosasList.add(new ProductoGeneral("Gaseosa Inca Kola Botella 500ml", "gaseosa_incakola", "fdsf",1.70));
-        productoGaseosasList.add(new ProductoGeneral("Gaseosa Coca Cola Botella 600ml", "gaseosa_cocacola", "fdsf",2.60));
-        productoGaseosasList.add(new ProductoGeneral("Gaseosa Fanta Naranja Botella 500ml", "gaseosa_fanta", "fdsf",2.50));
-        productoGaseosasList.add(new ProductoGeneral("Gaseosa Sprite Botella 500ml", "gaseosa_sprite", "fdsf",2.30));
-        productoGaseosasList.add(new ProductoGeneral("Gaseosa Pepsi Botella 500ml", "gaseosa_pepsi", "fdsf",2.20));
-        productoGaseosasList.add(new ProductoGeneral("Gaseosa Guarana Botella 450ml", "gaseosa_guarana", "fdsf",2.10));
-        productoGaseosasList.add(new ProductoGeneral("Gaseosa Viva Backus Botella 450ml", "gaseosa_viva", "fdsf",1.20));
-        productoGaseosasList.add(new ProductoGeneral("Gaseosa Concordia Botella 500ml", "gaseosa_concordia", "fdsf",2.70));
-        productoGaseosasList.add(new ProductoGeneral("Gaseosa 7UP Botella 355ml", "gaseosa_7up", "fdsf",1.20));
-        productoGaseosasList.add(new ProductoGeneral("Gaseosa Crush Botella 450ml", "gaseosa_crush", "fdsf",1.90));
+        productoGaseosasList.add(new ProductoGeneral("Gaseosa Inca Kola Botella 500ml", "gaseosa_incakola", "Denominación: Bebida clasificada.\n" + "\n" + "Ingredientes: Agua Carbonatada, azúcar, regulador de la acidez (sin 330), SUSTANCIA CONSERVADORA (SIN 211), CAFEÍNA, SABORIZANTES Y COLORANTE (SIN 102). CONTIENE: TARTRAZINA.",1.70));
+        productoGaseosasList.add(new ProductoGeneral("Gaseosa Coca Cola Botella 600ml", "gaseosa_cocacola", "Bebida gaseosa y refrescante. El refresco más popular de la historia. Sabor original. Contiene cafeína.\n" + "Valor Energético: 84 kcal = 353 kJ y 4\n" + "Carbohidratos: 22 g\n" + "Grasas Totales: 0 g\n" + "Sodio: 8 mg",2.60));
+        productoGaseosasList.add(new ProductoGeneral("Gaseosa Fanta Naranja Botella 500ml", "gaseosa_fanta", "Fanta es una bebida carbonatada sabor naranja que intensifica la diversión con amigos a través de su sabor superior, frutal e intenso, una bebida refrescante con un 8% de zumo de naranja",2.50));
+        productoGaseosasList.add(new ProductoGeneral("Gaseosa Sprite Botella 500ml", "gaseosa_sprite", "Sprite ofrece hidratación baja en sodio y una personalidad divertida, honesta e irreverente. Sabor: Lima-Limón. Ingredientes: Agua carbonatada, azúcares, concentrado Sprite, benzoato de sodio y estevia (1,4 mg/ 100 g).",2.30));
+        productoGaseosasList.add(new ProductoGeneral("Gaseosa Pepsi Botella 500ml", "gaseosa_pepsi", "Es una gaseosa inspiradora, que llama al cambio y a salirse de lo convencional. \n" + "Agua carbonatada, azúcar, colorante: E-150d, acidulante: E-338, aromas (contiene cafeína), edulcorantes: acesulfamo K y sucralosa.\n" + "No contiene alérgenos de obligada declaración.",2.20));
+        productoGaseosasList.add(new ProductoGeneral("Gaseosa Guarana Botella 450ml", "gaseosa_guarana", "La clásica Guaraná de Backus, con una refrescancia única que te invita a ver el mundo de una manera original. Prueba las nuevas variedades inspiradas en el sabor natural: Guaraná Camu Camu y Guaraná Copoazú. Encuéntrala en sus presentaciones de 450ml, 2 litros y 3 litros.",2.10));
+        productoGaseosasList.add(new ProductoGeneral("Gaseosa Viva Backus Botella 450ml", "gaseosa_viva", "Jóvenes que buscan divertirse sin complicaciones, solo Viva Backus hace que tus momentos de diversión duren más y el disfrute sea mayor gracias a su rico sabor. Además tiene menos gas y empalaga menos. ¡Es una gaseosa Libre de Octógonos!",1.20));
+        productoGaseosasList.add(new ProductoGeneral("Gaseosa Concordia Botella 500ml", "gaseosa_concordia", "Concordia es una bebida carbonatada sabor naranja que intensifica la diversión con amigos a través de su sabor superior, frutal e intenso, una bebida refrescante con un 8% de zumo de naranja",2.70));
+        productoGaseosasList.add(new ProductoGeneral("Gaseosa 7UP Botella 355ml", "gaseosa_7up", "Si te gusta disfrutar de la vida de una manera descomplicada, esta gaseosa es para ti. 7up es una bebida transparente que al probarla lleva a una experiencia refrescante con su sabor a lima-limón. 7up también se encuentra en versión light.",1.20));
+        productoGaseosasList.add(new ProductoGeneral("Gaseosa Crush Botella 450ml", "gaseosa_crush", "Bebida sin alcohol dietética gasificada con sabor a guaraná. \n" + "Para los jóvenes y jóvenes adultos que tienen una personalidad más atrevida. Crush es la gaseosa que te da un golpe de sabor para que te atrevas a pasar por experiencias diferentes.",1.90));
 
         adapter3 = new ProductoGaseosasAdaptor(productoGaseosasList);
         recyclerViewGaseosaList.setAdapter(adapter3);
@@ -161,16 +166,16 @@ public class BebidasActivity extends AppCompatActivity {
         recyclerViewJugoList.setLayoutManager(linearLayoutManager);
 
         ArrayList<ProductoGeneral> productoJugosList = new ArrayList<>();
-        productoJugosList.add(new ProductoGeneral("Frugos Durazno Caja 235ml", "jugo_frugos", "fdsf",3.50));
-        productoJugosList.add(new ProductoGeneral("Bebida Gloria Naranja Caja 1L", "jugo_gloria", "fdsf",3.90));
-        productoJugosList.add(new ProductoGeneral("Chica Morada Naturale Botella 500ml", "jugo_naturale", "fdsf",4.50));
-        productoJugosList.add(new ProductoGeneral("Tampico Citrus Punch Botella 600ml", "jugo_tampico", "fdsf",3.50));
-        productoJugosList.add(new ProductoGeneral("Bio Amayu Arandano Botella 300ml", "jugo_bioamayu", "fdsf",3.50));
-        productoJugosList.add(new ProductoGeneral("Refresco Clight Sobre Doble 14g", "jugo_clight", "fdsf",2.09));
-        productoJugosList.add(new ProductoGeneral("Cifrut Citrus Punch Botella 350ml", "jugo_cifrut", "fdsf",2.20));
-        productoJugosList.add(new ProductoGeneral("Refresco Instantaneo Zuko Sobre 15g", "jugo_zuko", "fdsf",1.20));
-        productoJugosList.add(new ProductoGeneral("Umsha Chica Morada Bolsa 13g", "jugo_umsha", "fdsf",1.10));
-        productoJugosList.add(new ProductoGeneral("Bebida Frutaris Botella 500ml", "jugo_frutaris", "fdsf",1.50));
+        productoJugosList.add(new ProductoGeneral("Frugos Durazno Caja 235ml", "jugo_frugos", "Frugos es un néctar constituido por el jugo y la pulpa de la fruta finamente dividida y tamizada adicionada de agua, azúcar y sometido a un proceso que asegura su conservación, de modo que no utiliza preservantes.",3.50));
+        productoJugosList.add(new ProductoGeneral("Bebida Gloria Naranja Caja 1L", "jugo_gloria", "Es un producto obtenido mediante la dilución con agua tratada del jugo concentrado de naranja, con adición de azúcar blanco, fortificado con hierro, zinc y vitaminas B6, B12, ácido fólico y C; además contiene aditivos autorizados.  Es ideal para ser consumido en cualquier momento del día.",3.90));
+        productoJugosList.add(new ProductoGeneral("Chica Morada Naturale Botella 500ml", "jugo_naturale", "La Chicha Morada es la bebida no gasificada. Nuestra chicha morada lista para tomar NATURALE está hecha a base de pura fruta, sin ningún tipo de saborizante y respetando todos los ingredientes de la receta tradicional: Maíz morado, Membrillo, Piña, Manzana, Canela y Clavo de olor.",4.50));
+        productoJugosList.add(new ProductoGeneral("Tampico Citrus Punch Botella 600ml", "jugo_tampico", "Bebida refrescante elaborada con jugo concentrado de frutas (naranja, mandarina y limón) y enriquecida con vitamina C. Es ideal para jóvenes entre 18 y 25 años que estudian y/o trabajan y a quienes les gusta viajar, experimentar y divertirse con amigos.",3.50));
+        productoJugosList.add(new ProductoGeneral("Bio Amayu Arandano Botella 300ml", "jugo_bioamayu", "El Acaí es una súper fruta antioxidante por excelencia, rica en vitaminas E, C y B y delicioso sabor. Nuestro jugo con Acaí Amazónico contiene fibra dietética de fuente natural y Acaí cultivado sosteniblemente por comunidades que permiten la reforestación de la Amazonía Colombiana.",3.50));
+        productoJugosList.add(new ProductoGeneral("Refresco Clight Sobre Doble 14g", "jugo_clight", "Acido cítrico, Maltodextrina, Fosfato tricálcico (agente antiaglomerante), Citrato trisódico (regulador de acidez), Edulcorante artificial sucralosa, Edulcorante artificial acesulfame -k, Sabor natural a naranja, Sabor artificial a naranja, Colorante artificial dióxido de titanio",2.09));
+        productoJugosList.add(new ProductoGeneral("Cifrut Citrus Punch Botella 350ml", "jugo_cifrut", "Bebida con vitaminas esenciales C, B6, A, B12 y mezcla de jugos de naranja, mandarina y limón proveniente de concentrado. Composición Naranja, mandarina y limón Azúcares Totales 36g Grasas Totales 73kcal Proteínas Totales 0g Sodio Total 99mg ",2.20));
+        productoJugosList.add(new ProductoGeneral("Refresco Instantaneo Zuko Sobre 15g", "jugo_zuko", "Zuko es polvo para preparar bebidas de fruta en 17 diferentes sabores tales como horchata, piña, naranja, mango, limonada, tamarindo, jamaica, fresa, ponche de frutas, manzana, melón y durazno, es que es fácil de preparar. Sólo agregue agua y listo!",1.20));
+        productoJugosList.add(new ProductoGeneral("Umsha Chica Morada Bolsa 13g", "jugo_umsha", "Descripción: mezcla en polvo para preparar bebida instantánea sabor a chicha morada. Rinde en dos litros de agua y no necesita azúcar.\n" + "Endulzado con Stevia\n" + "Peso neto 20 g\n" + "Marca: Negrita\n" + "Procedencia: producto peruano",1.10));
+        productoJugosList.add(new ProductoGeneral("Bebida Frutaris Botella 500ml", "jugo_frutaris", " Frutaris es una bebida ligeramente gasificada, con sabor a frutas. Su sabor refrescante y su contenido cero calorías es ideal para el día a día. Frutaris cuenta con sabor a manzana, fresaris, durazno y pera. ",1.50));
 
         adapter4 = new ProductoJugosAdaptor(productoJugosList);
         recyclerViewJugoList.setAdapter(adapter4);

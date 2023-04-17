@@ -51,6 +51,10 @@ public class LimpiezaActivity extends AppCompatActivity {
         Intent intent =new Intent(this, InicioActivity.class);
         startActivity(intent);
     }
+    public void carrito(View view){
+        Intent intent =new Intent(this, CarritoActivity.class);
+        startActivity(intent);
+    }
 
     public void menu(View view){
         Intent intent =new Intent(this, MenuActivity.class);

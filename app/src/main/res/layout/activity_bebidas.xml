@@ -132,6 +132,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginTop="10dp"
                     android:clipToPadding="false"
+                    android:onClick="carrito"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -323,6 +324,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#ff5e00"
             android:elevation="3dp"
+            android:onClick="carrito"
             android:src="@drawable/shopping_cart"
             app:backgroundTint="#ff5e00"
             app:layout_anchor="@+id/app_bar">

@@ -85,6 +85,11 @@ public class InicioActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void carrito(View view){
+        Intent intent =new Intent(this, CarritoActivity.class);
+        startActivity(intent);
+    }
+
     public void buscar(View view){
         Intent intent =new Intent(this, BuscadorActivity.class);
         startActivity(intent);

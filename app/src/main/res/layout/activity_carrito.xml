@@ -5,6 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E9F0ED"
     tools:context=".Activity.CarritoActivity">
 
 
@@ -18,7 +19,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingBottom="90dp">
 
             <TextView
                 android:id="@+id/textView13"
@@ -34,7 +36,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerView"
                 android:layout_width="match_parent"
-                android:layout_height="264dp">
+                android:layout_height="wrap_content">
 
             </androidx.recyclerview.widget.RecyclerView>
 
@@ -51,6 +53,7 @@
                     android:layout_width="45dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:paddingStart="20dp"
                     android:text="Objetos Total:"
                     android:textColor="#373b54"
                     android:textSize="18sp"
@@ -60,8 +63,9 @@
                     android:id="@+id/totalFeeTxt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
                     android:layout_weight="1"
-                    android:gravity="center"
+                    android:gravity="right"
                     android:text="0"
                     android:textColor="#373b54"
                     android:textSize="18sp"
@@ -81,6 +85,7 @@
                     android:layout_width="45dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:paddingStart="20dp"
                     android:text="Servicio Delivery:"
                     android:textColor="#373b54"
                     android:textSize="18sp"
@@ -90,9 +95,11 @@
                     android:id="@+id/deliveryTxt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
                     android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingStart="50dp"
                     android:text="s/ 0"
-                    android:gravity="center"
                     android:textColor="#373b54"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -111,6 +118,7 @@
                     android:layout_width="45dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:paddingStart="20dp"
                     android:text="Impuesto:"
                     android:textColor="#373b54"
                     android:textSize="18sp"
@@ -120,9 +128,11 @@
                     android:id="@+id/taxTxt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
                     android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingStart="50dp"
                     android:text="s/ 0"
-                    android:gravity="center"
                     android:textColor="#373b54"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -141,6 +151,7 @@
                     android:layout_width="45dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:paddingStart="20dp"
                     android:text="Total:"
                     android:textColor="#373b54"
                     android:textSize="18sp"
@@ -150,9 +161,11 @@
                     android:id="@+id/totalTxt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
                     android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingStart="50dp"
                     android:text="s/ 0"
-                    android:gravity="center"
                     android:textColor="#373b54"
                     android:textSize="18sp"
                     android:textStyle="bold" />

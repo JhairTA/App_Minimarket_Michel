@@ -53,6 +53,11 @@ public class CuidadoPersonalActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void carrito(View view){
+        Intent intent =new Intent(this, CarritoActivity.class);
+        startActivity(intent);
+    }
+
     public void menu(View view){
         Intent intent =new Intent(this, MenuActivity.class);
         startActivity(intent);
@@ -118,16 +123,16 @@ public class CuidadoPersonalActivity extends AppCompatActivity {
         recyclerViewProductoCuidadoBucalList.setLayoutManager(linearLayoutManager);
 
         ArrayList<ProductoGeneral> productoCuidadoBucalList = new ArrayList<>();
-        productoCuidadoBucalList.add(new ProductoGeneral("Pasta Dental Colgate Paquete 3un", "cu_colgate", "fdsf",18.00));
-        productoCuidadoBucalList.add(new ProductoGeneral("Listerine Enjuague Bucal 500ml", "cu_listerine", "fdsf",17.00));
-        productoCuidadoBucalList.add(new ProductoGeneral("Hilo Dental Oral-B X 1 Unidad", "cu_hilo", "fdsf",11.75));
-        productoCuidadoBucalList.add(new ProductoGeneral("Cepillo Dental Colgate 3 Unidades", "cu_cepillo", "fdsf",15.20));
-        productoCuidadoBucalList.add(new ProductoGeneral("Pasta Dental Oral-B Caja 75ml", "cu_oralb", "fdsf",12.50));
-        productoCuidadoBucalList.add(new ProductoGeneral("Colgate Enjuague Bucal X 500ml", "cu_colgateenjuage", "fdsf",17.58));
-        productoCuidadoBucalList.add(new ProductoGeneral("Pasta Dental Dento Tubo 75ml", "cu_dento", "fdsf",15.20));
-        productoCuidadoBucalList.add(new ProductoGeneral("Cepillo Electrico Oral-B Caja 1un", "cu_cepilloelectrico", "fdsf",59.90));
-        productoCuidadoBucalList.add(new ProductoGeneral("Dento Enjuague Bucal Menta 500ml", "cu_dentoenjuage", "fdsf",14.50));
-        productoCuidadoBucalList.add(new ProductoGeneral("Hilo Dental Colgate X 1 Unidad", "cu_colgatehilo", "fdsf",13.19));
+        productoCuidadoBucalList.add(new ProductoGeneral("Pasta Dental Colgate Paquete 3un", "cu_colgate", "La Pasta Dental Colgate contiene enzimas naturales que ayudan a eliminar la placa y los residuos de comida de los dientes y encías",18.00));
+        productoCuidadoBucalList.add(new ProductoGeneral("Listerine Enjuague Bucal 500ml", "cu_listerine", "Esta fórmula especializada está diseñada para combatir la placa y el mal aliento, dejando una sensación de limpieza en la boca.",17.00));
+        productoCuidadoBucalList.add(new ProductoGeneral("Hilo Dental Oral-B X 1 Unidad", "cu_hilo", "Es una herramienta esencial para la limpieza dental diaria. Este hilo dental está diseñado para ayudar a eliminar la placa y los restos de comida entre los dientes y debajo de la línea de las encías, áreas donde el cepillado regular no puede llegar.",11.75));
+        productoCuidadoBucalList.add(new ProductoGeneral("Cepillo Dental Colgate 3 Unidades", "cu_cepillo", "Estos cepillos dentales están diseñados para ayudar a eliminar la placa y los restos de comida entre los dientes y debajo de la línea de las encías, áreas donde el cepillado regular no puede llegar",15.20));
+        productoCuidadoBucalList.add(new ProductoGeneral("Pasta Dental Oral-B Caja 75ml", "cu_oralb", "Esta pasta dental tiene una fórmula avanzada que contiene flúor y otros ingredientes que ayudan a fortalecer el esmalte dental y a proteger los dientes de las bacterias y los ácidos que pueden causar caries.",12.50));
+        productoCuidadoBucalList.add(new ProductoGeneral("Colgate Enjuague Bucal X 500ml", "cu_colgateenjuage", "Este enjuague bucal tiene una fórmula avanzada que contiene fluoruro y otros ingredientes que ayudan a proteger los dientes y las encías de las bacterias que pueden causar caries, placa y problemas de las encías.\n",17.58));
+        productoCuidadoBucalList.add(new ProductoGeneral("Pasta Dental Dento Tubo 75ml", "cu_dento", "Esta pasta dental contiene una fórmula básica que ayuda a eliminar la placa y los restos de comida de los dientes y las encías, y proporciona una sensación de limpieza en la boca después del cepillado.",15.20));
+        productoCuidadoBucalList.add(new ProductoGeneral("Cepillo Electrico Oral-B Caja 1un", "cu_cepilloelectrico", "El cepillo eléctrico Oral-B cuenta con cerdas redondeadas y suaves que son suaves con los dientes y las encías. La cabeza del cepillo es oscilante y rotativa, lo que permite una limpieza efectiva y una eliminación más completa de la placa dental.",59.90));
+        productoCuidadoBucalList.add(new ProductoGeneral("Dento Enjuague Bucal Menta 500ml", "cu_dentoenjuage", "Este enjuague bucal tiene una fórmula avanzada que contiene ingredientes que ayudan a combatir la placa bacteriana, previenen la caries y promueven una buena salud bucal.",14.50));
+        productoCuidadoBucalList.add(new ProductoGeneral("Hilo Dental Colgate X 1 Unidad", "cu_colgatehilo", "Este hilo dental es suave y resistente, lo que le permite deslizarse fácilmente entre los dientes y eliminar los restos de comida y la placa bacteriana que se acumulan en los espacios interdentales.",13.19));
 
         adapter2=new ProductoCuidadoBucalAdaptor(productoCuidadoBucalList);
         recyclerViewProductoCuidadoBucalList.setAdapter(adapter2);

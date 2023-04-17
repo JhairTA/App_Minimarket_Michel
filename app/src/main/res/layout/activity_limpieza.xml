@@ -283,6 +283,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#ff5e00"
             android:elevation="3dp"
+            android:onClick="carrito"
             android:src="@drawable/shopping_cart"
             app:backgroundTint="#ff5e00"
             app:layout_anchor="@+id/app_bar">

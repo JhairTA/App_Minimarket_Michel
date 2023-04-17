@@ -50,6 +50,11 @@ public class MascotaActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void carrito(View view){
+        Intent intent =new Intent(this, CarritoActivity.class);
+        startActivity(intent);
+    }
+
     public void menu(View view){
         Intent intent =new Intent(this, MenuActivity.class);
         startActivity(intent);
@@ -115,16 +120,16 @@ public class MascotaActivity extends AppCompatActivity {
         recyclerViewPerroList.setLayoutManager(linearLayoutManager);
 
         ArrayList<ProductoGeneral> productoPerroList = new ArrayList<>();
-        productoPerroList.add(new ProductoGeneral("Comida para Perros Ricocan Bolsa 15kg", "p_ricocan", "fdsf",74.90));
-        productoPerroList.add(new ProductoGeneral("Comida para Perros Mimaskot Bolsa 15kg", "p_mimaskot", "fdsf",107.80));
-        productoPerroList.add(new ProductoGeneral("Comida para Perros Bells Bolsa 25kg", "p_bells", "fdsf",95.60));
-        productoPerroList.add(new ProductoGeneral("Comida para Perros Dog Chow Bolsa 100g", "p_dogchow", "fdsf",4.30));
-        productoPerroList.add(new ProductoGeneral("Comida para Perros Nutrican Bolsa 25kg", "p_nutrican", "fdsf",129.20));
-        productoPerroList.add(new ProductoGeneral("Comida para Perros Pedigree Bolsa 100g", "p_pedrigree", "fdsf",4.10));
-        productoPerroList.add(new ProductoGeneral("Comida para Perros Pet Care Bolsa 95g", "p_petcare", "fdsf",3.00));
-        productoPerroList.add(new ProductoGeneral("Pro Plan Puppy Complete Bolsa 20kg", "p_proplan", "fdsf",113.90));
-        productoPerroList.add(new ProductoGeneral("Comida para Perros Purina One Bolsa 6kg", "p_purinaone", "fdsf",38.60));
-        productoPerroList.add(new ProductoGeneral("Snacks para Perros Gnawlers Bolsa 8un", "p_gnawlers", "fdsf",10.90));
+        productoPerroList.add(new ProductoGeneral("Comida para Perros Ricocan Bolsa 15kg", "p_ricocan", "Fibras Naturales: semillas de linaza con alto contenido de fibra soluble e insoluble. Omega 3 y 6: fuente de DHA,EPA y ácido linoleico. Minerales: calcio, hierro y fósforo. Minerales Orgánicos: zinc y cobre, enlazados a aminoácidos con mayor porcentaje de absorción.",74.90));
+        productoPerroList.add(new ProductoGeneral("Comida para Perros Mimaskot Bolsa 15kg", "p_mimaskot", "La Comidaestá formulada con ingredientes naturales y de alta calidad, como carne fresca, pescado y frutas y verduras, lo que asegura una fuente rica de proteínas, vitaminas y minerales esenciales.\n",107.80));
+        productoPerroList.add(new ProductoGeneral("Comida para Perros Bells Bolsa 25kg", "p_bells", "Los ingredientes utilizados en la Comida incluyen proteínas de alta calidad como carne y pollo, así como cereales, verduras y frutas para proporcionar una nutrición equilibrada y completa",95.60));
+        productoPerroList.add(new ProductoGeneral("Comida para Perros Dog Chow Bolsa 100g", "p_dogchow", "La Comida está formulada con ingredientes de alta calidad, como proteína de pollo, que proporcionan una nutrición completa\n" + "Este paquete de 100 gramos es ideal para perros de raza pequeña o como complemento a la alimentación regular de perros más grandes",4.30));
+        productoPerroList.add(new ProductoGeneral("Comida para Perros Nutrican Bolsa 25kg", "p_nutrican", "La Comida  está formulada con ingredientes de alta calidad, incluyendo proteínas de pollo y cordero, que proporcionan una fuente rica y saludable de proteínas para ayudar a mantener una buena masa muscular y un sistema inmunológico fuerte.",129.20));
+        productoPerroList.add(new ProductoGeneral("Comida para Perros Pedigree Bolsa 100g", "p_pedrigree", "La Comida  está formulada con ingredientes de alta calidad, como carne y pollo, que proporcionan una nutrición completa y equilibrada para perros de todas las edades y tamaños.",4.10));
+        productoPerroList.add(new ProductoGeneral("Comida para Perros Pet Care Bolsa 95g", "p_petcare", "Este paquete de 95 gramos es ideal para perros de raza pequeña o como complemento a la alimentación regular de perros más grandes",3.00));
+        productoPerroList.add(new ProductoGeneral("Pro Plan Puppy Complete Bolsa 20kg", "p_proplan", "Está hecho con una combinación de ingredientes de alta calidad, como pollo fresco, arroz y maíz, que proporcionan una fuente de proteína, carbohidratos y nutrientes esenciales \n",113.90));
+        productoPerroList.add(new ProductoGeneral("Comida para Perros Purina One Bolsa 6kg", "p_purinaone", "Esta fórmula está hecha con ingredientes de alta calidad, como carne de pollo real y arroz, que proporcionan una fuente rica y saludable de proteínas y carbohidratos para su perro.",38.60));
+        productoPerroList.add(new ProductoGeneral("Snacks para Perros Gnawlers Bolsa 8un", "p_gnawlers", "Cada unidad está hecha con ingredientes de alta calidad, incluyendo proteína de pollo y de res, y no contiene colorantes ni conservantes artificiales.\n",10.90));
 
         adapter2 = new ProductoPerroAdaptor(productoPerroList);
         recyclerViewPerroList.setAdapter(adapter2);
