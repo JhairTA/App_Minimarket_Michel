@@ -50,7 +50,7 @@
                             android:layout_weight="1"
                             android:fontFamily="@font/circularstd_bold"
                             android:gravity="center_vertical"
-                            android:text="Mi Pedido"
+                            android:text="Detalle de Orden"
                             android:textColor="#4C4968"
                             android:textSize="35sp" />
 
@@ -64,8 +64,8 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textViewusuario"
-                            android:layout_width="55dp"
+                            android:id="@+id/textviewusuariopedido"
+                            android:layout_width="56dp"
                             android:layout_height="match_parent"
                             android:layout_marginStart="25dp"
                             android:layout_weight="1"
@@ -76,15 +76,16 @@
                             android:textSize="18sp" />
 
                         <TextView
-                            android:id="@+id/txtusuariopedido"
+                            android:id="@+id/txtTusuario"
                             android:layout_width="wrap_content"
                             android:layout_height="52dp"
                             android:layout_weight="1"
                             android:fontFamily="@font/roboto"
                             android:gravity="center"
                             android:text="TextView"
-                            android:textSize="17sp" />
+                            android:textSize="17dp" />
                     </LinearLayout>
+
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -113,6 +114,8 @@
                             android:text="TextView"
                             android:textSize="17dp" />
                     </LinearLayout>
+
+
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -231,12 +234,15 @@
                             android:elevation="4dp"
                             android:fontFamily="@font/circularstd_medium"
                             android:gravity="center"
+                            android:onClick="CancelarPedidos"
                             android:padding="20sp"
                             android:text="Cancelar Pedido"
                             android:textAllCaps="false"
                             android:textColor="#49535D"
                             android:textSize="15dp" />
                     </LinearLayout>
+
+
 
 
                     <Button

@@ -83,7 +83,7 @@ public class LoginAdmin extends AppCompatActivity {
                         String phoneFromDB = snapshot.child(userUsername).child("telefono").getValue(String.class);
                         String emailFromDB = snapshot.child(userUsername).child("correo").getValue(String.class);
                         String usernameFromDB = snapshot.child(userUsername).child("usuario").getValue(String.class);
-                        Intent intent = new Intent(LoginAdmin.this, RegistroEmpleado.class);
+                        Intent intent = new Intent(LoginAdmin.this, MenuAdministrador.class);
                         intent.putExtra("nombre", nameFromDB);
                         intent.putExtra("apellido", apellidoFromDB);
                         intent.putExtra("dni", dniFromDB);

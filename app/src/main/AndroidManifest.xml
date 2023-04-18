@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -14,11 +15,38 @@
         android:theme="@style/Theme.Proyecto_Final"
         tools:targetApi="31">
         <activity
+            android:name=".Activity.MainActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.MasOfertas"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.DetalleOferta"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.MenuAdministrador"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.UploadActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Rcyv_itemAnuncios"
+            android:exported="false" />
+        <activity
+            android:name=".DetalleAnuncios"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.ActualizarAnuncios"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.DatosUsuarioActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activity.LoginRegistrar"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".Activity.CarritoActivity"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".ViewPedidos"
             android:exported="false" />
@@ -33,56 +61,56 @@
             android:exported="false" />
         <activity
             android:name=".Activity.RegistroEmpleado"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".Activity.LoginAdmin"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".Activity.CuidadoPersonalActivity"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".Activity.MascotaActivity"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".Activity.LimpiezaActivity"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".Activity.SnacksActivity"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".Activity.BebidasActivity"
-            android:exported="true" />
-        <activity
-            android:name=".Activity.LoginRegistrar"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".Activity.LoginIngresar"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".Activity.Login"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".Activity.InicioActivity"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".Activity.MenuActivity"
             android:exported="false" />
         <activity
             android:name=".Activity.BuscadorActivity"
-            android:exported="true"
+            android:exported="false"
             android:windowSoftInputMode="stateVisible|adjustResize" />
         <activity
             android:name=".Activity.ShowDetailGeneralActivity"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".Activity.ShowDetail2Activity"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".Activity.ShowDetailActivity"
-            android:exported="true" />
+            android:exported="false" />
+        <activity
+            android:name=".Activity.ShowDetailActivity3"
+            android:exported="false" />
         <activity
             android:name=".Activity.MainActivity"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".Activity.IntroActivity"
             android:exported="true">
@@ -96,6 +124,9 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+        <meta-data android:name="com.google.android.geo.API_KEY"
+            android:value="@string/android_sdk_map_api_key"/>
     </application>
 
 </manifest>

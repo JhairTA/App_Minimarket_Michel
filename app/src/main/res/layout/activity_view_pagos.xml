@@ -5,6 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#EDEDEC"
+    android:paddingStart="10dp"
+    android:paddingTop="20dp"
     tools:context=".ViewPagos">
 
     <androidx.cardview.widget.CardView
@@ -23,31 +25,6 @@
             android:layout_height="653dp"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="63dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/textViewprectotal"
-                    android:layout_width="66dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="25dp"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/circularstd_bold"
-                    android:gravity="center_vertical"
-                    android:text="Precio Total:"
-                    android:textColor="#4C4968"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/txtusuariopedido"
-                    android:layout_width="wrap_content"
-                    android:layout_height="63dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="TextView" />
-            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -105,8 +82,8 @@
                     android:drawableLeft="@drawable/baseline_credit_card_24"
                     android:ems="10"
                     android:fontFamily="@font/roboto_bold"
-                    android:maxLength="16"
                     android:inputType="number"
+                    android:maxLength="16"
                     android:paddingEnd="8dp"
                     android:textColor="#737171"
                     android:textColorHint="#A6A5AA"
@@ -157,10 +134,10 @@
                     android:background="@drawable/text_border"
                     android:drawableLeft="@drawable/baseline_calendar_month_24"
                     android:ems="10"
-                    android:maxLength="5"
                     android:fontFamily="@font/roboto_mono_medium"
                     android:hint="MM/AA"
                     android:inputType="textPersonName"
+                    android:maxLength="5"
                     android:textColor="#737171"
                     android:textColorHint="#A6A5AA"
                     android:textSize="13dp" />
@@ -177,8 +154,8 @@
                     android:ems="10"
                     android:fontFamily="@font/roboto_bold"
                     android:hint="123"
-                    android:maxLength="3"
                     android:inputType="number"
+                    android:maxLength="3"
                     android:textColor="#737171"
                     android:textColorHint="#A6A5AA"
                     android:textSize="13dp" />
@@ -227,6 +204,13 @@
                     android:textSize="15dp" />
 
             </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Envio a Domicilio" />
 
             <LinearLayout
                 android:layout_width="match_parent"

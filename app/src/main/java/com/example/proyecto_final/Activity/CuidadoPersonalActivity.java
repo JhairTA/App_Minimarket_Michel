@@ -144,16 +144,16 @@ public class CuidadoPersonalActivity extends AppCompatActivity {
         recyclerViewProductoHigienePersonalList.setLayoutManager(linearLayoutManager);
 
         ArrayList<ProductoGeneral> productoHigienePersonalList = new ArrayList<>();
-        productoHigienePersonalList.add(new ProductoGeneral("Jabón Dove Cremoso Original 3un", "hp_dove", "fdsf",11.70));
-        productoHigienePersonalList.add(new ProductoGeneral("Moncler Jabón Azul Barra 145g ", "hp_moncler", "fdsf",5.10));
-        productoHigienePersonalList.add(new ProductoGeneral("Desodorante Axe Epic Fres 150ml", "hp_axe", "fdsf",12.90));
-        productoHigienePersonalList.add(new ProductoGeneral("Jabón en Barra Protex Fresh", "hp_protex", "fdsf",3.20));
-        productoHigienePersonalList.add(new ProductoGeneral("Desodorante Lady Speed Stick Barra 45g", "hp_ladyspeed", "fdsf",19.30));
-        productoHigienePersonalList.add(new ProductoGeneral("Desodorante Rexona Invisible X 150ml", "hp_rexona", "fdsf",17.58));
-        productoHigienePersonalList.add(new ProductoGeneral("H&S Classic Clean 650ml", "hp_hs", "fdsf",10.50));
-        productoHigienePersonalList.add(new ProductoGeneral("Desodorante Old Spice - Spray 150ml", "hp_oldspice", "fdsf",17.40));
-        productoHigienePersonalList.add(new ProductoGeneral("Jabón Liquido Aval Frutos Rojos 800ml", "hp_aval", "fdsf",13.20));
-        productoHigienePersonalList.add(new ProductoGeneral("Nivea Soft Crema Humectante X 100 ml", "hp_nivea", "fdsf",18.90));
+        productoHigienePersonalList.add(new ProductoGeneral("Jabón Dove Cremoso Original 3un", "hp_dove", "Esta suave fórmula limpiadora contiene 1/4 de crema humectante para darte una piel más suave, sedosa y de apariencia más saludable.",11.70));
+        productoHigienePersonalList.add(new ProductoGeneral("Moncler Jabón Azul Barra 145g ", "hp_moncler", "Jabón de tocador unitario Moncler azul refrescante. Su inconfundible fragancia reproduce un aroma fresco y limpio. Perfecto para el cuidado corporal, ya que cuenta con excelente formulación, alto rendimiento y una forma anatómica. Moncler, dura toda una familia.",5.10));
+        productoHigienePersonalList.add(new ProductoGeneral("Desodorante Axe Epic Fresh 150ml", "hp_axe", "Audaz, fresco y deportivo, el nuevo desodorante AXE Epic Fresh llegó para quedarse. Con una fragancia de notas amaderadas y un giro de frescura que le aportan el ananá y el pomelo, te va a llevar sin dudas a una experiencia épica.",12.90));
+        productoHigienePersonalList.add(new ProductoGeneral("Jabón en Barra Protex Fresh", "hp_protex", "Jabón antibacterial en barra Protex® elimina impurezas suavemente para una piel saludable. Ofrece una protección antibacterial natural con óleo de linaza.\n" + "\n" + "Elimina el 99.9 % de las bacterias* naturalmente manteniendote protegido al largo del día**.",3.20));
+        productoHigienePersonalList.add(new ProductoGeneral("Desodorante Lady Speed Stick Barra 45g", "hp_ladyspeed", "Este desodorante antitranspirante para mujer te mantiene ultra seca y protegida contra el sudor y mal olor hasta por 48 horas. Confía en ti misma y atrévete a hacer lo que te mueve con Lady Speed Stick® 24/7 Powder Fresh en barra, una protección tan bárbara como tú",19.30));
+        productoHigienePersonalList.add(new ProductoGeneral("Desodorante Rexona Invisible X 150ml", "hp_rexona", "No más manchas de antitranspirante\n" + "Máxima protección contra manchas de sudor amarillas y blancas.\n" + "Protección superior por 48 horas sin dejar rastros ni manchas.\n"+ "Disponible para hombre y para mujer",17.58));
+        productoHigienePersonalList.add(new ProductoGeneral("H&S Classic Clean 650ml", "hp_hs", "H&S Classic Clean Shampoo brinda un cuidado clásico que limpia profundamente tu cabello dejándolo fresco y cuidado además de ayudar a reducir la caspa y molestias como picazón y sequedad.",10.50));
+        productoHigienePersonalList.add(new ProductoGeneral("Desodorante Old Spice - Spray 150ml", "hp_oldspice", "Conoce el desodorante en aerosol Old Spice\n" + "\n" + "- Con tecnología DuraScent ™, para oler increíble todo el dia\n" + "- Antibacterial: Elimina hasta 99.9% de las bacterias que producen el mal olor\n" + "- Body Spray: Puedes usarlo de pies a cabeza",17.40));
+        productoHigienePersonalList.add(new ProductoGeneral("Jabón Liquido Aval Frutos Rojos 800ml", "hp_aval", "El Jabón Líquido Aval es hipoalergénico contiene extracto de vainilla que deja suavidad y un olor incomparable , además protege tu piel ya que es antibacterial y elimina el 99.99% de las bacterias.",13.20));
+        productoHigienePersonalList.add(new ProductoGeneral("Nivea Soft Crema Humectante X 100 ml", "hp_nivea", "NIVEA Soft, la crema de humectación intensiva, es una emulsión de aceite en agua. ¿Que quiere decir? Las gotitas más pequeñas de aceite se sitúan dentro de una fase acuosa, absorbiéndose rápidamente en la piel. Cuando tu piel está bien hidratada, luce sedosa, fresca y te hace sentir bien.",18.90));
 
         adapter3=new ProductoHigienePersonalAdaptor(productoHigienePersonalList);
         recyclerViewProductoHigienePersonalList.setAdapter(adapter3);

@@ -109,7 +109,7 @@ public class CarritoActivity extends AppCompatActivity {
         double total=Math.round((managementCart.getTotalFee()+tax+delivery)*100)/100;
         double itemTotal=Math.round(managementCart.getTotalFee()*100)/100;
 
-        totalFeeTxt.setText("S/"+" "+itemTotal);
+        totalFeeTxt.setText(" "+itemTotal);
         taxTxt.setText("$"+tax);
         deliveryTxt.setText("S/"+" "+delivery);
         totalTxt.setText(" "+total);

@@ -30,9 +30,10 @@
 
     <string name="separador">────────────────────────────────────────</string>
     <string name="despacho">✔ Despacho a Domicilio</string>
-    <string name="nombre">Raul Torres</string>
-    <string name="correo">RaulT15@gmail.com</string>
-    <string name="suscripcion">Miembro desde: 2 Sep 2022</string>
+    <string name="nombre">Kevin Tirado</string>
+    <string name="correo">Kevintirado2003@gmail.com</string>
+    <string name="suscripcion">Miembro desde: 18 Abril 2023</string>
+    <string name="datos">Mis Datos Personales</string>
 
     <string name="pedido">Mi Pedido</string>
     <string name="oferta">Ofertas</string>
@@ -40,4 +41,25 @@
     <string name="cuenta">Mi Cuenta</string>
 
     <string name="sesion">Cerrar Sesión</string>
+
+    <string name="Toolbar1">Bienvenido</string>
+    <string name="Nombre">Alfredo Avila Ortiz</string>
+    <string name="Cargo">Administrador</string>
+    <string name="Codigo">Codigo: AD145769</string>
+    <string name="opcion">Elija una opción:</string>
+    <string name="cerrar">Cerrar Sesion</string>
+    <string name="registro_emp">Registro Empleado</string>
+
+    <string name="label_from">Direccion origen: %sl</string>
+    <string name="label_to">Direccion destino: %sl</string>
+    <string name="label_distance">Distancia:</string>
+    <string name="label_time">Time:</string>
+    <string name="label_price">Precio:</string>
+    <string name="no_place_selected">Sin seleccion</string>
+    <string name="btn_change">Modificar</string>
+    <string name="marker_title_to">Hasta:</string>
+    <string name="marker_title_from">Desde:</string>
+
+    <string name="android_sdk_places_api_key">AIzaSyAw8OTWD6Qotm_4oUEacsIZEdcmjEsAzVY</string>
+    <string name="android_sdk_map_api_key">AIzaSyAw8OTWD6Qotm_4oUEacsIZEdcmjEsAzVY</string>
 </resources>

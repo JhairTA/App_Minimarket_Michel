@@ -1,6 +1,7 @@
 package com.example.proyecto_final.Adaptor;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 
 import com.bumptech.glide.Glide;
+import com.example.proyecto_final.Activity.ShowDetailGeneralActivity;
 import com.example.proyecto_final.R;
 import com.example.proyecto_final.pojo.Productos;
 
@@ -44,6 +46,15 @@ public class AdapterProducto extends RecyclerView.Adapter<AdapterProducto.viewho
         holder.recTitle.setText(pd.getNombre());
         holder.recPrecio.setText(pd.getPrecio());
 
+        /*holder.recBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(holder.itemView.getContext(), ShowDetailGeneralActivity.class);
+                intent.putExtra("Object", (CharSequence) productosList.get(position));
+                holder.itemView.getContext().startActivity(intent);
+            }
+        });*/
+
     }
 
     @Override
@@ -55,6 +66,7 @@ public class AdapterProducto extends RecyclerView.Adapter<AdapterProducto.viewho
 
         ImageView recImage;
         TextView recTitle, recPrecio;
+        TextView recBtn;
 
         public viewholderproductos(@NonNull View itemView) {
             super(itemView);
@@ -62,6 +74,7 @@ public class AdapterProducto extends RecyclerView.Adapter<AdapterProducto.viewho
             recImage = itemView.findViewById(R.id.recImage);
             recTitle = itemView.findViewById(R.id.recTitle);
             recPrecio = itemView.findViewById(R.id.recPrecio);
+            recBtn =  itemView.findViewById(R.id.recBtn);
         }
     }
 }

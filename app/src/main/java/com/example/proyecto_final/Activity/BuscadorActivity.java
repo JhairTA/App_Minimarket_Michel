@@ -52,7 +52,7 @@ public class BuscadorActivity extends AppCompatActivity {
         rv = findViewById(R.id.recyclerView);
         searchView = findViewById(R.id.search);
         lm = new LinearLayoutManager((this));
-        menu= findViewById(R.id.menu);
+        //menu= findViewById(R.id.menu);
 
         rv.setLayoutManager(lm);
         list = new ArrayList<>();
@@ -91,7 +91,7 @@ public class BuscadorActivity extends AppCompatActivity {
         });
 
         //*****************************************************************************
-        final Context c = this;
+        /*final Context c = this;
         final View activityRootView = findViewById(R.id.activityRoot);
         activityRootView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override
@@ -104,16 +104,16 @@ public class BuscadorActivity extends AppCompatActivity {
                     menu.setVisibility(View.VISIBLE); // Lo haces visible
                 }
             }
-        });
+        });*/
         //*****************************************************************************
 
     }
 
     //*****************************************************************************
-    public static float dpToPx(Context context, float valueInDp) {
+    /*public static float dpToPx(Context context, float valueInDp) {
         DisplayMetrics metrics = context.getResources().getDisplayMetrics();
         return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, valueInDp, metrics);
-    }
+    }*/
     //*****************************************************************************
     private void buscar(String s){
         ArrayList<Productos> milista = new ArrayList<>();

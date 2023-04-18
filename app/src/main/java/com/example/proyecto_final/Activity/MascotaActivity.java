@@ -141,16 +141,16 @@ public class MascotaActivity extends AppCompatActivity {
         recyclerViewGatoList.setLayoutManager(linearLayoutManager);
 
         ArrayList<ProductoGeneral> productoGatoList = new ArrayList<>();
-        productoGatoList.add(new ProductoGeneral("Comida para Gatos Ricocat Bolsa 9Kg", "cg_ricocat", "fdsf",94.50));
-        productoGatoList.add(new ProductoGeneral("Comida para Gatos Bells Bolsa 1Kg", "cg_bells", "fdsf",9.90));
-        productoGatoList.add(new ProductoGeneral("Comida para Gatos Purina One Bolsa 2Kg", "cg_purinaone", "fdsf",7.10));
-        productoGatoList.add(new ProductoGeneral("Comida para Gatos Mimaskot Bolsa 9Kg", "cg_mimaskot", "fdsf",85.50));
-        productoGatoList.add(new ProductoGeneral("Comida para Gatos Whiskas Bolsa 9Kg", "cg_whiskas", "fdsf",131.20));
-        productoGatoList.add(new ProductoGeneral("Comida para Gatos Cat Chow Bolsa 8Kg", "cg_catchow", "fdsf",114.90));
-        productoGatoList.add(new ProductoGeneral("Comida para Gatos Sheba Sobre 85g", "cg_sheba", "fdsf",4.20));
-        productoGatoList.add(new ProductoGeneral("Comida para Gatos Felix Pouch x 85Gr", "cg_felix", "fdsf",3.50));
-        productoGatoList.add(new ProductoGeneral("Comida para Gatos Fancy Feast Lata 85g", "cg_fancyfeast", "fdsf",6.40));
-        productoGatoList.add(new ProductoGeneral("Arena para Gatos Cool Cat Bolsa 10Kg", "cg_coolcat", "fdsf",29.50));
+        productoGatoList.add(new ProductoGeneral("Comida para Gatos Ricocat Bolsa 9Kg", "cg_ricocat", "Beneficio \n" + "• Digestión saludable: proteínas que facilitan el proceso digestivo y la asimilación de nutrientes clave. • Desarrollo de la visión: La vitamina A y la taurina participan en la formación de las estructuras de su retina y en el desarrollo de su agudeza visual.",94.50));
+        productoGatoList.add(new ProductoGeneral("Comida para Gatos Bells Bolsa 1Kg", "cg_bells", "Los ingredientes utilizados en la Comida incluyen proteínas de alta calidad como carne y pollo, así como cereales, verduras y frutas para proporcionar una nutrición equilibrada y completa",9.90));
+        productoGatoList.add(new ProductoGeneral("Comida para Gatos Purina One Bolsa 2Kg", "cg_purinaone", "Verdaderamente con carnes como ingredientes principales\n" + "Granos seleccionados, alga y aceite de coco\n" + "Digestibilidad elevada. 30% menos heces\n" + "Con pulpa de remolacha que fortalece la flora intestinal",7.10));
+        productoGatoList.add(new ProductoGeneral("Comida para Gatos Mimaskot Bolsa 9Kg", "cg_mimaskot", "Sabor a pollo, carne y salmón.\n" + "Pelo saludable y brillante: Reforzado con zinc orgánico.\n" + "Prevención de cálculos urinarios: Macrominerales que permiten un pH urinario correcto y ayuda a prevenir enfermedades del tracto urinario.",85.50));
+        productoGatoList.add(new ProductoGeneral("Comida para Gatos Whiskas Bolsa 9Kg", "cg_whiskas", "Especialmente preparadas para preservar la naturalidad y la exquisitez de los ingredientes de alta calidad, nuestras comidas favoritas harán que su gato corra al plato más rápido que nunca.  Desde el gatito juguetón hasta el felino distinguido.",131.20));
+        productoGatoList.add(new ProductoGeneral("Comida para Gatos Cat Chow Bolsa 8Kg", "cg_catchow", "Una buena nutrición es fundamental para proteger la salud de los gatos. Es por eso que desarrollamos PURINA® CAT CHOW® CON DEFENSE PLUS®, elaborado con una selección de ingredientes naturales y mejorado, con la inclusión de un prebiótico natural",114.90));
+        productoGatoList.add(new ProductoGeneral("Comida para Gatos Sheba Sobre 85g", "cg_sheba", "Alimento para gato que provee una nutrición 100% completa y balanceada para tu compañero felino.\n" + "Filetes selectos hechos con ingredientes que no contienen conservadores ni colorantes artificiales.\n",4.20));
+        productoGatoList.add(new ProductoGeneral("Comida para Gatos Felix Pouch x 85Gr", "cg_felix", "Beneficios:\n" + "Proporcionar después de esterilizar, ayuda a evitar problemas de sobrepeso.\n" + "Aumenta el volumen de la ración de comida sin aumentar el aporte calórico.\n" + "Alternativa para gatitos en recuperación.",3.50));
+        productoGatoList.add(new ProductoGeneral("Comida para Gatos Fancy Feast Lata 85g", "cg_fancyfeast", "Muchos gatos suelen ser muy especiales al momento de elegir su alimento. Por eso Fancy Feast, ofrece un menú completo y variado de deliciosos sabores y texturas para que tu gato tenga una experiencia gourmet todos los días.",6.40));
+        productoGatoList.add(new ProductoGeneral("Arena para Gatos Cool Cat Bolsa 10Kg", "cg_coolcat", "Cool Cat es una arena para gatos a base de Bentonita natural, inerte y granulada con alta capacidad de retención de humedad y olores." + "\n"+ "\n"+ "\n",29.50));
 
         adapter3 = new ProductoGatoAdaptor(productoGatoList);
         recyclerViewGatoList.setAdapter(adapter3);

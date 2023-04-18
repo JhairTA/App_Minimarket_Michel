@@ -67,7 +67,7 @@ public class RegistroEmpleado extends AppCompatActivity {
                 if (!nombre.isEmpty() && !apellido.isEmpty() && !dni.isEmpty() && !usuario.isEmpty() && !telefono.isEmpty() && !correo.isEmpty() && !contraseña.isEmpty()){
                     if (contraseña.length()>=6){
                         Toast.makeText(RegistroEmpleado.this, "Usuario registrado correctamente", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(RegistroEmpleado.this,LoginAdmin.class));
+                        startActivity(new Intent(RegistroEmpleado.this, MenuAdministrador.class));
                     }else{
                         Toast.makeText(RegistroEmpleado.this, "La contraseña debe tener como mínimo 6 caracteres", Toast.LENGTH_SHORT).show();
                     }

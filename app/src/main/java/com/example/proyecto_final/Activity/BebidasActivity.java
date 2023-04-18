@@ -124,16 +124,16 @@ public class BebidasActivity extends AppCompatActivity {
         recyclerViewAguaList.setLayoutManager(linearLayoutManager);
 
         ArrayList<ProductoGeneral> productoAguasList = new ArrayList<>();
-        productoAguasList.add(new ProductoGeneral("Agua Cielo Botella 600ml", "agua_cielo", "fdsf",1.50));
-        productoAguasList.add(new ProductoGeneral("Agua San Luis Botella 625ml", "agua_sanluis", "fdsf",1.30));
-        productoAguasList.add(new ProductoGeneral("Agua San Carlos Botella 500ml", "agua_sancarlos", "fdsf",3.70));
-        productoAguasList.add(new ProductoGeneral("Agua Loa Botella 625ml", "agua_loa", "fdsf",1.20));
-        productoAguasList.add(new ProductoGeneral("Agua San Mateo Botella 600ml", "agua_sanmateo", "fdsf",1.50));
-        productoAguasList.add(new ProductoGeneral("Agua Socosani Botella 500ml", "agua_socosani", "fdsf",6.40));
-        productoAguasList.add(new ProductoGeneral("Agua Pura Vida Botella 635ml", "agua_puravida", "fdsf",1.20));
-        productoAguasList.add(new ProductoGeneral("Agua Bells Sin Gas Botella 2.5L", "agua_bells", "fdsf",2.29));
-        productoAguasList.add(new ProductoGeneral("Agua Benedictino Botella 600ml", "agua_benedictino", "fdsf",4.99));
-        productoAguasList.add(new ProductoGeneral("Agua San Luis Bidón 7L", "agua_sanluisbidon", "fdsf",22.50));
+        productoAguasList.add(new ProductoGeneral("Agua Cielo Botella 600ml", "agua_cielo", "CIELO es la marca de agua que te acompaña en cada una de tus actividades diarias, guiándote hacia el estilo de vida que deseas, aportando una sensación de bienestar interior y haciéndote sentir parte de un universo de belleza y sensualidad.",1.50));
+        productoAguasList.add(new ProductoGeneral("Agua San Luis Botella 625ml", "agua_sanluis", "Descubre todas nuestras presentaciones como bidones de agua mineral y agua mineral en caja. Recuerda mantenerte siempre hidratado ya que el agua regula tu grasa mala y toxinas. Esto te ayuda a conservar tu peso ideal y una piel tersa naturalmente",1.30));
+        productoAguasList.add(new ProductoGeneral("Agua San Carlos Botella 500ml", "agua_sancarlos", "¡Ahora es más fácil comprar Agua SAN CARLOS sin Gas Botella 500ml!" + "\n"+ "\n"+ "\n",3.70));
+        productoAguasList.add(new ProductoGeneral("Agua Loa Botella 625ml", "agua_loa", "Agua extraída de yacimientos subterráneos, elimina toxinas y ayuda a fortalecer el sistema inmunológico, es tratada bajo altos estándares de calidad. Agua ligera, con el mejor sabor y ph alcalino que ayuda al correcto funcionamiento del cuerpo",1.20));
+        productoAguasList.add(new ProductoGeneral("Agua San Mateo Botella 600ml", "agua_sanmateo", "El agua mineral San Mateo tiene origen de manantial y contiene minerales buenos para tu cuerpo. Mantente siempre hidratado. Encuéntrala Con Gas o Sin Gas en sus presentaciones de 600ml, 1.5 litros y 2 litros.",1.50));
+        productoAguasList.add(new ProductoGeneral("Agua Socosani Botella 500ml", "agua_socosani", "Socosani está clasificada como agua mineral natural. Esto significa que tiene efectos fisiológicos beneficiosos para la salud, tiene una composición química constante, su pureza es original y es de origen subterráneo.",6.40));
+        productoAguasList.add(new ProductoGeneral("Agua Pura Vida Botella 635ml", "agua_puravida", "Agua tratada y ozonizada. Está dirigida a toda la familia y puede consumirse en cualquier momento del día. El agua favorece la hidratación, facilita el transporte de nutrientes y oxígeno, y regula la temperatura, entre otros muchos beneficios",1.20));
+        productoAguasList.add(new ProductoGeneral("Agua Bells Sin Gas Botella 2.5L", "agua_bells", "Caracteristicas: \n" + "Agua Mineral\n"+ "\n" + "Presentación : Botella de 2.5 Litros"+ "\n"+ "\n",2.29));
+        productoAguasList.add(new ProductoGeneral("Agua Benedictino Botella 600ml", "agua_benedictino", " Considerada una de las aguas más puras del mundo, gracias su riguroso proceso productivo, Benedictino se caracteriza por ser un agua purificada en su máximo estado. ** Es decir, es sometida a diferentes e innumerables procesos de purificación, que como resultado logra un agua libre de sodio y de cualquier agente externo.",4.99));
+        productoAguasList.add(new ProductoGeneral("Agua San Luis Bidón 7L", "agua_sanluisbidon", "Para jovenes adultos que buscan el balance perfecto entre vitalidad y bienestar.\n" + "La frescura y pureza de san luis permite a sus consumidores encontrar el equilibrio que el cuerpo y ala mente necesitan, mejorando las experiencias de la vida diaria, porque su alta pureza no solo pureza no solo brnda un fresco sabor si no que ayuda a sentirse bien dia a dia.",22.50));
 
         adapter2 = new ProductoAguasAdaptor(productoAguasList);
         recyclerViewAguaList.setAdapter(adapter2);

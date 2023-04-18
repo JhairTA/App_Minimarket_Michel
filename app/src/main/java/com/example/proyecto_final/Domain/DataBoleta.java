@@ -5,27 +5,20 @@ import java.util.Map;
 public class DataBoleta {
 
     private String idBoleta;
-    private String usuario;
+    private String apellido;
     private Map<String, DataProducto> productos;
     private double total;
     private String medioPago;
     private String fecha;
-    private int totalproducto;
+    private double totalproducto;
 
     public DataBoleta() {
     }
 
-    public DataBoleta(double total, String fecha) {
+    public DataBoleta(String apellido, double total, String fecha) {
+        this.apellido = apellido;
         this.total = total;
         this.fecha = fecha;
-    }
-
-    public int getTotalproducto() {
-        return totalproducto;
-    }
-
-    public void setTotalproducto(int totalproducto) {
-        this.totalproducto = totalproducto;
     }
 
     public String getIdBoleta() {
@@ -36,12 +29,12 @@ public class DataBoleta {
         this.idBoleta = idBoleta;
     }
 
-    public String getUsuario() {
-        return usuario;
+    public String getApellido() {
+        return apellido;
     }
 
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
     }
 
     public Map<String, DataProducto> getProductos() {
@@ -74,5 +67,13 @@ public class DataBoleta {
 
     public void setFecha(String fecha) {
         this.fecha = fecha;
+    }
+
+    public double getTotalproducto() {
+        return totalproducto;
+    }
+
+    public void setTotalproducto(double totalproducto) {
+        this.totalproducto = totalproducto;
     }
 }

@@ -20,9 +20,10 @@
 
     <LinearLayout
         android:id="@+id/linearLayout3"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
+        android:background="#9CCF60"
         android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@+id/sliderId"
         tools:layout_editor_absoluteX="1dp">
@@ -36,6 +37,7 @@
             android:layout_marginRight="5dp"
             android:layout_weight="1"
             android:backgroundTint="@color/white"
+            android:onClick="ofertas"
             android:text="Ofertas"
             android:textColor="#020101"
             app:cornerRadius="10dp"
@@ -54,18 +56,6 @@
             app:cornerRadius="10dp"
             app:strokeColor="@color/blue" />
 
-        <Button
-            style="?attr/materialButtonOutlinedStyle"
-            android:layout_width="114dp"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="5dp"
-            android:layout_weight="1"
-            android:backgroundTint="@color/white"
-            android:text="Lo mas popular"
-            android:textColor="#020101"
-            app:cornerRadius="10dp"
-            app:strokeColor="@color/blue" />
     </LinearLayout>
 
     <TextView
@@ -250,6 +240,7 @@
         </com.google.android.material.bottomappbar.BottomAppBar>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/cartBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="#ff5e00"

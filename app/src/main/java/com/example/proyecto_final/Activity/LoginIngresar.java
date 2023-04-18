@@ -23,6 +23,12 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 public class LoginIngresar extends AppCompatActivity {
 
@@ -120,6 +126,26 @@ public class LoginIngresar extends AppCompatActivity {
                     dialog.getWindow().setBackgroundDrawable(new ColorDrawable(0));
                 }
                 dialog.show();
+            }
+        });
+    }
+
+    public void checkUser(){
+        String usercorreo = correo.getText().toString().trim();
+        String userpass = contraseña.getText().toString().trim();
+
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Usuarios");
+        Query checkUserDatabase = reference.orderByChild("correo").equalTo(usercorreo);
+
+        checkUserDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
             }
         });
     }
