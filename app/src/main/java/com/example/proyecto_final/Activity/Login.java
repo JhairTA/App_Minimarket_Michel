@@ -27,6 +27,7 @@ import com.google.firebase.auth.GoogleAuthProvider;
 public class Login extends AppCompatActivity {
     private TextView goToLoginAdmin;
 
+
     private static final int RC_SIGN_IN = 1;
     private FirebaseAuth mAuth;
     private GoogleSignInClient mGoogleSignInClient;
@@ -60,6 +61,8 @@ public class Login extends AppCompatActivity {
                 signIn();
             }
         });
+
+        setGoogleButtonText(mSignInButtonGoogle,"Iniciar sesíon con Google");
     }
     private void signIn() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
@@ -134,5 +137,18 @@ public class Login extends AppCompatActivity {
     public void Regisrar(View view){
         Intent login=new Intent(this,LoginRegistrar.class);
         startActivity(login);
+    }
+
+    protected void setGoogleButtonText(SignInButton signInButton, String buttonText) {
+        // Encontrar el texto que esta dentro del boton
+        for (int i = 0; i < signInButton.getChildCount(); i++) {
+            View v = signInButton.getChildAt(i);
+
+            if (v instanceof TextView) {
+                TextView tv = (TextView) v;
+                tv.setText(buttonText);
+                return;
+            }
+        }
     }
 }
