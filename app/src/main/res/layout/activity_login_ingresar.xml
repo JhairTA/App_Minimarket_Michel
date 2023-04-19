@@ -3,67 +3,84 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="20dp"
     tools:context=".Activity.LoginIngresar">
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Iniciar Sesión"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="24sp"
-        android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="match_parent"
         android:layout_height="195dp"
         android:layout_marginTop="10dp"
-        app:srcCompat="@drawable/usuario" />
+        android:layout_marginBottom="20dp"
+        app:srcCompat="@drawable/login_banner" />
 
-    <EditText
-        android:id="@+id/email1"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/edittext_backgroud"
-        android:hint="Correo"
-        android:padding="10dp" />
+        android:layout_height="630dp"
+        android:background="@drawable/bottom_background"
+        android:backgroundTint="#6B81DD"
+        android:orientation="vertical"
+        android:padding="20dp">
 
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/edittext_backgroud"
-        android:hint="Contraseña"
-        android:inputType="textPassword"
-        android:padding="10dp" />
-    <Button
-        android:id="@+id/ingresar"
-        android:layout_gravity="center"
-        android:text="Ingresar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-    <TextView
-        android:id="@+id/resetContraseña"
-        android:textColor="#6B81DD"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:text="¿Olvidaste tu contraseña? Click Aquí"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-    <TextView
-        android:id="@+id/goToRegistrar"
-        android:textColor="#6B81DD"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:text="¿No tienes cuenta? Click Aquí"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Iniciar Sesión"
+            android:textAlignment="viewStart"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/email1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/edittext_backgroud"
+            android:hint="Correo"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext_backgroud"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:padding="10dp" />
+
+        <TextView
+            android:id="@+id/resetContraseña"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="50dp"
+            android:text="¿Olvidaste tu contraseña?"
+            android:textColor="#070707" />
+
+        <Button
+            android:id="@+id/ingresar"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/cat_background4"
+            android:text="Ingresar" />
+
+        <TextView
+            android:id="@+id/goToRegistrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="¿No tienes cuenta?"
+            android:textColor="#050505" />
+    </LinearLayout>
 
 </LinearLayout>
