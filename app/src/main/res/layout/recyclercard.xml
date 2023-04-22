@@ -24,11 +24,12 @@
                 android:id="@+id/recTitle"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
+                android:background="#FF8F00"
                 android:fontFamily="@font/circularstd_medium"
                 android:gravity="center"
                 android:maxLines="1"
                 android:text="Titulo"
-                android:textColor="#574545"
+                android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
             <ImageView

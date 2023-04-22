@@ -46,4 +46,9 @@ public class DetalleOferta extends AppCompatActivity {
         }
 
     }
+
+    public void anuncios(View view){
+        Intent intent =new Intent(this, MasOfertas.class);
+        startActivity(intent);
+    }
 }

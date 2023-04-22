@@ -5,7 +5,7 @@
     android:id="@+id/activityRoot"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E9F0ED"
+    android:background="@drawable/fondopedido"
     tools:context=".Activity.BuscadorActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -17,7 +17,8 @@
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="#FFFFFF" />
 
     <androidx.appcompat.widget.SearchView
         android:id="@+id/search"

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,48 +8,88 @@
     android:background="#F0F2F6"
     tools:context=".Activity.DetalleOferta">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/detailTitle"
-        android:text="Titulo"
-        android:fontFamily="@font/circularstd_bold"
-        android:layout_marginTop="18dp"
-        android:textSize="26sp"
-        android:layout_gravity="center"
-        android:layout_marginBottom="12dp"
-        android:textColor="#FF5722"/>
-
     <ImageView
-        android:id="@+id/detailImage"
-        android:layout_width="398dp"
-        android:layout_height="223dp"
-        android:layout_gravity="center"
-        android:padding="8dp"
-        android:src="@drawable/gallery" />
-
-    <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/imageView6"
         android:layout_width="match_parent"
-        android:layout_height="42dp"
-        android:fontFamily="@font/circularstd_bold"
-        android:paddingLeft="30dp"
-        android:paddingTop="10dp"
-        android:text="Descripcion : "
-        android:textSize="20dp" />
+        android:layout_height="match_parent"
+        android:layout_marginTop="390dp"
+        app:srcCompat="@drawable/tolbar" />
 
-    <TextView
-        android:id="@+id/detailDesc"
-        android:layout_width="390dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/text_redondeado"
-        android:fontFamily="@font/circularstd_medium"
-        android:padding="20dp"
-        android:text="Description"
-        android:textColor="#6A6969"
-        android:textSize="18sp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="688dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="386dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/detailImage"
+                android:layout_width="match_parent"
+                android:layout_height="494dp"
+                android:layout_gravity="center"
+                android:padding="8dp"
+                android:src="@drawable/gallery" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="119dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/detailTitle"
+                android:layout_width="369dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="12dp"
+                android:fontFamily="@font/circularstd_bold"
+                android:text="Titulo"
+                android:textColor="#2063B7"
+                android:textSize="26sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="232dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/detailDesc"
+                android:layout_width="match_parent"
+                android:layout_height="233dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/text_redondeado"
+                android:fontFamily="@font/circularstd_medium"
+                android:padding="20dp"
+                android:text="Description"
+                android:textColor="#514D6A"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="380dp"
+        android:layout_height="72dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginBottom="71dp"
+        android:background="@drawable/tolbar"
+        android:backgroundTint="#1F65BC"
+        android:fontFamily="@font/roboto_medium"
+        android:onClick="anuncios"
+        android:text="Ver mas ofertas"
+        android:textColor="#fff"
+        android:textSize="24sp" />
 
 
-</LinearLayout>
+
+</RelativeLayout>

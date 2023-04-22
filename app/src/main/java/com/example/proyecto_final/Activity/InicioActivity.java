@@ -113,12 +113,12 @@ public class InicioActivity extends AppCompatActivity {
                 startActivity(new Intent(InicioActivity.this, CarritoActivity.class));
             }
         });
-        homeBtn.setOnClickListener(new View.OnClickListener() {
+        /*homeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(InicioActivity.this,InicioActivity.class));
             }
-        });
+        });*/
     }
 
     //opcion

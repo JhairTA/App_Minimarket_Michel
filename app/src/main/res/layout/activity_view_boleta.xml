@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondopedido"
     tools:context=".ViewBoleta">
 
     <RelativeLayout
@@ -115,7 +116,7 @@
                             android:layout_weight="1"
                             android:fontFamily="@font/roboto_bold"
                             android:gravity="center_vertical"
-                            android:text="Sub Total"
+                            android:text="Total de productos:"
                             android:textAlignment="textStart"
                             android:textColor="#302C59"
                             android:textSize="17sp" />
@@ -310,10 +311,9 @@
                     android:id="@+id/button4"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#FF5E00"
+                    android:background="#302F3E"
                     android:elevation="10dp"
                     android:fontFamily="@font/roboto_medium"
-                    android:onClick="SeguirComprando"
                     android:text="Seguir comprando"
                     android:textColor="#ffff"
                     android:textSize="20sp" />

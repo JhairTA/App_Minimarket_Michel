@@ -4,33 +4,72 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EDEDEC"
+    android:background="@drawable/fondopedido"
     tools:context=".ViewPedidos">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <ImageView
+            android:id="@+id/imageView16"
+            android:layout_width="207dp"
+            android:layout_height="100dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="110dp"
+            android:layout_marginEnd="103dp"
+            android:elevation="10dp"
+            app:srcCompat="@drawable/tarea_completada" />
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="304dp"
+            android:layout_height="116dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="107dp"
+            android:layout_weight="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
         <LinearLayout
-            android:layout_width="413dp"
-            android:layout_height="725dp"
+            android:layout_width="405dp"
+            android:layout_height="847dp"
             android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="149dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textViewtitulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="25dp"
+                    android:fontFamily="@font/circularstd_bold"
+                    android:gravity="center_vertical"
+                    android:text="MI ORDEN"
+                    android:textColor="#FFFF"
+                    android:textSize="40sp" />
+
+            </LinearLayout>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardViewPedidos"
-                android:layout_width="401dp"
-                android:layout_height="723dp"
+                android:layout_width="385dp"
+                android:layout_height="351dp"
                 android:layout_gravity="center"
+
+
                 android:layout_marginBottom="16dp"
-
-
-                android:backgroundTint="#FFFFFF"
-                app:cardBackgroundColor="#FFFFFF"
-                app:cardCornerRadius="30dp">
+                android:backgroundTint="#F8F9FD"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="10dp">
 
                 <LinearLayout
-                    android:layout_width="368dp"
-                    android:layout_height="660dp"
+                    android:layout_width="356dp"
+                    android:layout_height="329dp"
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:orientation="vertical">
@@ -38,29 +77,14 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="65dp"
+                        android:layout_height="55dp"
                         android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/textViewtitulo"
-                            android:layout_width="16dp"
-                            android:layout_height="101dp"
-                            android:layout_marginStart="25dp"
-                            android:layout_marginTop="-30dp"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/circularstd_bold"
-                            android:gravity="center_vertical"
-                            android:text="Detalle de Orden"
-                            android:textColor="#4C4968"
-                            android:textSize="35sp" />
-
 
                     </LinearLayout>
 
-
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="52dp"
+                        android:layout_height="66dp"
                         android:orientation="horizontal">
 
                         <TextView
@@ -72,24 +96,24 @@
                             android:fontFamily="@font/roboto_bold"
                             android:gravity="center_vertical"
                             android:text="Usuario:"
-                            android:textColor="#4C4968"
-                            android:textSize="18sp" />
+                            android:textColor="#56709D"
+                            android:textSize="17sp" />
 
                         <TextView
                             android:id="@+id/txtTusuario"
                             android:layout_width="wrap_content"
-                            android:layout_height="52dp"
+                            android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:fontFamily="@font/roboto"
+                            android:fontFamily="@font/roboto_medium"
                             android:gravity="center"
                             android:text="TextView"
+                            android:textColor="#4C4968"
                             android:textSize="17dp" />
                     </LinearLayout>
 
-
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="52dp"
+                        android:layout_height="60dp"
                         android:orientation="horizontal">
 
                         <TextView
@@ -100,26 +124,54 @@
                             android:layout_weight="1"
                             android:fontFamily="@font/roboto_bold"
                             android:gravity="center_vertical"
-                            android:text="Sub Total: "
-                            android:textColor="#4C4968"
-                            android:textSize="18sp" />
+                            android:text="SubTotal"
+                            android:textColor="#56709D"
+                            android:textSize="17sp" />
 
                         <TextView
                             android:id="@+id/txtTotalproducto"
                             android:layout_width="wrap_content"
-                            android:layout_height="52dp"
+                            android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:fontFamily="@font/roboto"
+                            android:fontFamily="@font/roboto_medium"
                             android:gravity="center"
                             android:text="TextView"
+                            android:textColor="#4C4968"
                             android:textSize="17dp" />
                     </LinearLayout>
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="61dp"
+                        android:orientation="horizontal">
 
+                        <TextView
+                            android:id="@+id/textViewcupon"
+                            android:layout_width="58dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="25dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/roboto_bold"
+                            android:gravity="center_vertical"
+                            android:text="Fecha :"
+                            android:textColor="#56709D"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:id="@+id/txtfecha"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="center"
+                            android:text="TextView"
+                            android:textColor="#4C4968"
+                            android:textSize="17sp" />
+                    </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="70dp"
+                        android:layout_height="103dp"
                         android:orientation="horizontal">
 
                         <TextView
@@ -130,108 +182,104 @@
                             android:layout_weight="1"
                             android:fontFamily="@font/roboto_bold"
                             android:gravity="center_vertical"
-                            android:text="Precio Total :"
-                            android:textColor="#4C4968"
-                            android:textSize="18sp"
+                            android:text="Total :"
+                            android:textColor="#56709D"
+                            android:textSize="36sp"
                             android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/txtpreciototal"
                             android:layout_width="wrap_content"
-                            android:layout_height="70dp"
+                            android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:fontFamily="@font/roboto"
+                            android:fontFamily="@font/roboto_medium"
                             android:gravity="center"
                             android:text="TextView"
-                            android:textSize="17dp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="52dp"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/textViewcupon"
-                            android:layout_width="58dp"
-                            android:layout_height="52dp"
-                            android:layout_marginStart="25dp"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/roboto_bold"
-                            android:gravity="center_vertical"
-                            android:text="Fecha :"
                             android:textColor="#4C4968"
-                            android:textSize="18sp" />
+                            android:textSize="25dp" />
 
-                        <TextView
-                            android:id="@+id/txtfecha"
-                            android:layout_width="wrap_content"
-                            android:layout_height="52dp"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/roboto"
-                            android:gravity="center"
-                            android:text="TextView"
-                            android:textSize="17sp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="94dp"
-                        android:orientation="horizontal">
-
-                        <Button
-                            android:id="@+id/btnmodificar"
-                            android:layout_width="185dp"
-                            android:layout_height="59dp"
-                            android:layout_marginStart="20dp"
-                            android:layout_marginTop="10dp"
-                            android:background="@drawable/btn_cuadroredondeado"
-                            android:drawableStart="@drawable/baseline_edit_24"
-                            android:fontFamily="@font/circularstd_medium"
-                            android:onClick="ModificarPedido"
-                            android:padding="12sp"
-                            android:text="Modificar Pedido "
-                            android:textAllCaps="false"
-                            android:textColor="#49535D"
-                            android:textSize="16dp" />
-
-                        <Button
-                            android:id="@+id/btnPedido"
-                            android:layout_width="wrap_content"
-                            android:layout_height="59dp"
-                            android:layout_marginStart="15dp"
-                            android:layout_marginTop="10dp"
-                            android:background="@drawable/btn_cuadroredondeado"
-                            android:drawableStart="@drawable/baseline_delete_24"
-                            android:elevation="4dp"
-                            android:fontFamily="@font/circularstd_medium"
-                            android:gravity="center"
-                            android:onClick="CancelarPedidos"
-                            android:padding="20sp"
-                            android:text="Cancelar Pedido"
-                            android:textAllCaps="false"
-                            android:textColor="#49535D"
-                            android:textSize="15dp" />
                     </LinearLayout>
 
 
+                </LinearLayout>
 
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="118dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnmodificar"
+                    android:layout_width="195dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/btn_cuadroredondeado"
+                    android:backgroundTint="#2ABC76"
+                    android:drawableStart="@drawable/baseline_edit_24"
+                    android:elevation="8dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:onClick="ModificarPedido"
+                    android:padding="12sp"
+                    android:text="Modificar Pedido "
+                    android:textAllCaps="false"
+                    android:textColor="#ffff"
+                    android:textSize="18dp" />
+
+                <Button
+                    android:id="@+id/btnPedido"
+                    android:layout_width="154dp"
+                    android:layout_height="63dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/btn_cuadroredondeado"
+                    android:backgroundTint="#F57F3D"
+                    android:drawableStart="@drawable/baseline_delete_24"
+                    android:elevation="8dp"
+                    android:fontFamily="@font/circularstd_medium"
+                    android:gravity="center"
+                    android:onClick="CancelarPedidos"
+                    android:padding="20sp"
+                    android:text="Cancelar Pedido"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="21dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginBottom="59dp"
+                    android:orientation="horizontal">
 
                     <Button
                         android:id="@+id/btnPagar"
-                        android:layout_width="331dp"
-                        android:layout_height="76dp"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginBottom="16dp"
-                        android:background="@drawable/btn_gradient"
+                        android:layout_width="373dp"
+                        android:layout_height="98dp"
+                        android:layout_marginStart="23dp"
+                        android:layout_marginTop="29dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="67dp"
+                        android:backgroundTint="#302F3E"
                         android:fontFamily="@font/circularstd_bold"
                         android:gravity="center"
                         android:text="Pagar"
                         android:textColor="#F1F1F1"
                         android:textSize="25dp" />
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
         </LinearLayout>
     </RelativeLayout>
 

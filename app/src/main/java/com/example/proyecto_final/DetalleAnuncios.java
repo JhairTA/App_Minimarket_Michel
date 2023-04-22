@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.proyecto_final.Activity.ActualizarAnuncios;
+import com.example.proyecto_final.Activity.MenuActivity;
 import com.example.proyecto_final.Activity.Rcyv_itemAnuncios;
 import com.github.clans.fab.FloatingActionButton;
 
@@ -77,7 +78,10 @@ public class DetalleAnuncios extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
 
-
+    public void litanuncios(View view){
+        Intent intent =new Intent(this, Rcyv_itemAnuncios.class);
+        startActivity(intent);
     }
 }
