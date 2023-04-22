@@ -11,30 +11,31 @@
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:layout_width="413dp"
-            android:layout_height="725dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="53dp" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardViewPedidos"
-                android:layout_width="387dp"
-                android:layout_height="682dp"
+                android:layout_width="369dp"
+                android:layout_height="673dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="16dp"
 
 
                 android:backgroundTint="#FFFFFF"
                 app:cardBackgroundColor="#FFFFFF"
-                app:cardCornerRadius="30dp">
+                app:cardCornerRadius="15dp"
+                app:cardElevation="7dp">
 
                 <LinearLayout
-                    android:layout_width="355dp"
-                    android:layout_height="638dp"
+                    android:layout_width="335dp"
+                    android:layout_height="613dp"
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:orientation="vertical">
@@ -42,12 +43,13 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="59dp"
+                        android:layout_height="87dp"
+                        android:gravity="center"
                         android:orientation="horizontal">
 
                         <ImageView
                             android:id="@+id/imageView3"
-                            android:layout_width="80dp"
+                            android:layout_width="58dp"
                             android:layout_height="47dp"
 
 
@@ -66,170 +68,197 @@
                             android:textSize="30sp" />
                     </LinearLayout>
 
-
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="52dp"
+                        android:layout_height="59dp"
                         android:orientation="horizontal">
 
                         <TextView
                             android:id="@+id/textViewusuario"
-                            android:layout_width="16dp"
+                            android:layout_width="32dp"
                             android:layout_height="match_parent"
-                            android:layout_marginStart="25dp"
+                            android:layout_marginStart="16dp"
                             android:layout_weight="1"
                             android:fontFamily="@font/roboto_bold"
                             android:gravity="center_vertical"
                             android:text="Usuario:"
-                            android:textColor="#4C4968"
-                            android:textSize="15sp" />
+                            android:textAlignment="textStart"
+                            android:textColor="#302C59"
+                            android:textSize="17sp" />
 
                         <TextView
                             android:id="@+id/txtusuariopedido"
                             android:layout_width="wrap_content"
-                            android:layout_height="52dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="17dp"
                             android:layout_weight="1"
-                            android:fontFamily="@font/roboto"
+                            android:elevation="8dp"
+                            android:fontFamily="@font/roboto_medium"
                             android:gravity="center"
-                            android:text="TextView" />
+                            android:text="hola"
+                            android:textAlignment="textEnd"
+                            android:textColor="#4C4968"
+                            android:textSize="16sp" />
+
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="61dp"
+                        android:layout_height="59dp"
                         android:orientation="horizontal">
 
                         <TextView
                             android:id="@+id/textViewtotal"
-                            android:layout_width="16dp"
+                            android:layout_width="61dp"
                             android:layout_height="match_parent"
-                            android:layout_marginStart="25dp"
+                            android:layout_marginStart="16dp"
                             android:layout_weight="1"
                             android:fontFamily="@font/roboto_bold"
                             android:gravity="center_vertical"
-                            android:text="Total de productos:"
-                            android:textColor="#4C4968"
-                            android:textSize="15sp" />
+                            android:text="Sub Total"
+                            android:textAlignment="textStart"
+                            android:textColor="#302C59"
+                            android:textSize="17sp" />
 
                         <TextView
                             android:id="@+id/txtTotalproducto"
                             android:layout_width="wrap_content"
-                            android:layout_height="52dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="17dp"
                             android:layout_weight="1"
-                            android:fontFamily="@font/roboto"
+                            android:fontFamily="@font/roboto_medium"
                             android:gravity="center"
-                            android:text="TextView" />
+                            android:text="TextView"
+                            android:textAlignment="textEnd"
+                            android:textColor="#4C4968"
+                            android:textSize="16sp" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="63dp"
+                        android:layout_height="59dp"
                         android:orientation="horizontal">
 
                         <TextView
                             android:id="@+id/textViewigv"
                             android:layout_width="2dp"
                             android:layout_height="match_parent"
-                            android:layout_marginStart="25dp"
+                            android:layout_marginStart="16dp"
                             android:layout_weight="1"
                             android:fontFamily="@font/roboto_bold"
                             android:gravity="center_vertical"
                             android:text="Igv :"
-                            android:textColor="#4C4968"
-                            android:textSize="15sp" />
+                            android:textColor="#302C59"
+                            android:textSize="17sp" />
 
                         <TextView
                             android:id="@+id/txtigv"
-                            android:layout_width="wrap_content"
-                            android:layout_height="63dp"
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="17dp"
                             android:layout_weight="1"
-                            android:fontFamily="@font/roboto"
 
+                            android:fontFamily="@font/roboto_medium"
                             android:gravity="center"
-                            android:text="18%" />
+                            android:text="18%"
+                            android:textAlignment="textEnd"
+                            android:textColor="#4C4968"
+                            android:textSize="16sp" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="70dp"
+                        android:layout_height="59dp"
                         android:orientation="horizontal">
 
                         <TextView
                             android:id="@+id/textView8"
                             android:layout_width="17dp"
                             android:layout_height="match_parent"
-                            android:layout_marginStart="25dp"
+                            android:layout_marginStart="16dp"
                             android:layout_weight="1"
                             android:fontFamily="@font/roboto_bold"
                             android:gravity="center_vertical"
                             android:text="Precio Total :"
-                            android:textColor="#4C4968"
-                            android:textSize="15sp"
+                            android:textColor="#302C59"
+                            android:textSize="17sp"
                             android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/txtpreciototal"
-                            android:layout_width="wrap_content"
-                            android:layout_height="70dp"
+                            android:layout_width="16dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="17dp"
                             android:layout_weight="1"
-                            android:fontFamily="@font/roboto"
+                            android:fontFamily="@font/roboto_medium"
                             android:gravity="center"
-                            android:text="TextView" />
+                            android:text="TextView"
+                            android:textAlignment="textEnd"
+                            android:textColor="#4C4968"
+                            android:textSize="16sp" />
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="52dp"
+                        android:layout_height="59dp"
                         android:orientation="horizontal">
 
                         <TextView
                             android:id="@+id/textViewcupon"
                             android:layout_width="20dp"
                             android:layout_height="52dp"
-                            android:layout_marginStart="25dp"
+                            android:layout_marginStart="16dp"
                             android:layout_weight="1"
                             android:fontFamily="@font/roboto_bold"
                             android:gravity="center_vertical"
                             android:text="Fecha :"
-                            android:textColor="#4C4968"
-                            android:textSize="15sp" />
+                            android:textColor="#302C59"
+                            android:textSize="17sp" />
 
                         <TextView
                             android:id="@+id/txtfecha"
-                            android:layout_width="wrap_content"
-                            android:layout_height="52dp"
+                            android:layout_width="20dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="17dp"
                             android:layout_weight="1"
-                            android:fontFamily="@font/roboto"
+                            android:fontFamily="@font/roboto_medium"
                             android:gravity="center"
-                            android:text="TextView" />
+                            android:text="TextView"
+                            android:textAlignment="textEnd"
+                            android:textColor="#4C4968"
+                            android:textSize="16sp" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="63dp"
+                        android:layout_height="59dp"
                         android:orientation="horizontal">
 
                         <TextView
                             android:id="@+id/textViewpago"
-                            android:layout_width="19dp"
-                            android:layout_height="52dp"
-                            android:layout_marginStart="25dp"
+                            android:layout_width="35dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="16dp"
                             android:layout_weight="1"
                             android:fontFamily="@font/roboto_bold"
                             android:gravity="center_vertical"
                             android:text="Medio de Pago :"
-                            android:textColor="#4C4968"
-                            android:textSize="15sp" />
+                            android:textColor="#302C59"
+                            android:textSize="17sp" />
 
                         <TextView
                             android:id="@+id/metpago"
-                            android:layout_width="wrap_content"
-                            android:layout_height="52dp"
+                            android:layout_width="37dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="17dp"
                             android:layout_weight="1"
-                            android:fontFamily="@font/roboto"
+                            android:fontFamily="@font/roboto_medium"
                             android:gravity="center"
-                            android:text="TextView" />
+                            android:text="MasterCard"
+                            android:textAlignment="textEnd"
+                            android:textColor="#4C4968"
+                            android:textSize="16sp" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -240,7 +269,7 @@
                         <ImageView
                             android:id="@+id/qr_code"
                             android:layout_width="match_parent"
-                            android:layout_height="148dp"
+                            android:layout_height="match_parent"
                             tools:srcCompat="@tools:sample/avatars" />
 
                     </LinearLayout>
@@ -252,8 +281,8 @@
 
                         <TextView
                             android:id="@+id/textViewpago24"
-                            android:layout_width="19dp"
-                            android:layout_height="match_parent"
+                            android:layout_width="307dp"
+                            android:layout_height="45dp"
                             android:layout_marginStart="25dp"
                             android:layout_weight="1"
                             android:fontFamily="@font/roboto_bold"
@@ -268,6 +297,30 @@
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="71dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#FF5E00"
+                    android:elevation="10dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:onClick="SeguirComprando"
+                    android:text="Seguir comprando"
+                    android:textColor="#ffff"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
         </LinearLayout>
     </RelativeLayout>
 

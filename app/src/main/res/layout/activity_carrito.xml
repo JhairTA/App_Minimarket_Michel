@@ -54,7 +54,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:paddingStart="20dp"
-                    android:text="Objetos Total:"
+                    android:text="Sub Total: "
                     android:textColor="#373b54"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -236,7 +236,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:onClick="inicio"
-                        app:srcCompat="@drawable/inicio" />
+                        app:srcCompat="@drawable/home" />
 
                     <TextView
                         android:id="@+id/textView1"
@@ -312,7 +312,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:onClick="buscar"
-                        app:srcCompat="@drawable/search" />
+                        app:srcCompat="@drawable/baseline_search_24" />
 
                     <TextView
                         android:id="@+id/textView4"

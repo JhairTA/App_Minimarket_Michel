@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="20dp"
     android:background="#EDEDEC"
     android:paddingStart="10dp"
     android:paddingTop="20dp"
@@ -204,13 +206,6 @@
                     android:textSize="15dp" />
 
             </LinearLayout>
-
-            <CheckBox
-                android:id="@+id/checkBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:text="Envio a Domicilio" />
 
             <LinearLayout
                 android:layout_width="match_parent"

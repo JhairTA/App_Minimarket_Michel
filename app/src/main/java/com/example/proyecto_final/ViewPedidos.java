@@ -200,10 +200,10 @@ public class ViewPedidos extends AppCompatActivity {
     }
 
 
-    public void Ingresar(View view) {
+    /*public void Ingresar(View view) {
         Intent login = new Intent(this, ListaProductospedido.class);
         startActivity(login);
-    }
+    }*/
 
     public void ModificarPedido(View view) {
         Intent login = new Intent(this, CarritoActivity.class);

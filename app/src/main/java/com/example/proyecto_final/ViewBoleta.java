@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.proyecto_final.Activity.CarritoActivity;
+import com.example.proyecto_final.Activity.InicioActivity;
 import com.example.proyecto_final.Domain.DataBoleta;
 import com.example.proyecto_final.Helper.ManagementCart3;
 import com.google.firebase.auth.FirebaseAuth;
@@ -142,5 +144,10 @@ public class ViewBoleta extends AppCompatActivity {
 
 
 
+    }
+
+    public void SeguirComprando(View view) {
+        Intent login = new Intent(this, InicioActivity.class);
+        startActivity(login);
     }
 }
